@@ -2,7 +2,7 @@
 
 Welcome to the documentation for developers. 👋 
 
-1- [Tag](https://github.com/ScreebApp/developers/wiki/Tag)
+1- [Tag and Javascript SDK](https://github.com/ScreebApp/developers/wiki/Tag-and-Javascript-SDK)
 
 2- [Webhook](https://github.com/ScreebApp/developers/wiki/Webhook)
 
