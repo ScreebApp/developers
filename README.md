@@ -17,6 +17,7 @@ Welcome to the documentation for developers. 👋
   * [Identity](https://github.com/ScreebApp/developers/wiki/Android-SDK-Identity)
   * [Group assignation](https://github.com/ScreebApp/developers/wiki/Android-SDK-Group-assignation)
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/Android-SDK-Event-tracking)
+  * [Screen tracking](https://github.com/ScreebApp/developers/wiki/Android-SDK-Screen-tracking)
 
 3- [iOS SDK](https://github.com/ScreebApp/developers/wiki/iOS-SDK-install)
   * [Install](https://github.com/ScreebApp/developers/wiki/iOS-SDK-install)
@@ -25,6 +26,7 @@ Welcome to the documentation for developers. 👋
   * [Identity](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Identity)
   * [Group assignation](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Group-assignation)
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Event-tracking)
+  * [Screen tracking](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Screen-tracking)
 
 4- Connectors
   * [Webhook v1.3.0](https://github.com/ScreebApp/developers/wiki/Webhook-v1.3.0)
