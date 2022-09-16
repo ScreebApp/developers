@@ -33,7 +33,14 @@ Welcome to the documentation for developers. 👋
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Screen-tracking)
   * [Start survey](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Start-survey)
 
-5- Connectors
+5- [Flutter SDK](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-install)
+  * [Identity](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Identity)
+  * [Group assignation](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Group-assignation)
+  * [Event tracking](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Event-tracking)
+  * [Screen tracking](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Screen-tracking)
+  * [Start survey](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Start-survey)
+
+6- Connectors
   * [Webhook v1.3.0](https://github.com/ScreebApp/developers/wiki/Webhook-v1.3.0)
   * [Stitch](https://github.com/ScreebApp/developers/wiki/Stitch)
 
