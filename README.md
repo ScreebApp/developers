@@ -6,7 +6,7 @@ Welcome to the documentation for developers. 👋
   * [Identity](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Identity)
   * [Group assignation](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Group-assignation)
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Event-tracking)
-  * [Start survey](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Start-survey)
+  * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Start-Survey-Programmatically)
   * [Examples](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Examples)
   * [Troubleshooting](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Troubleshooting)
 
@@ -15,7 +15,7 @@ Welcome to the documentation for developers. 👋
   * [Group assignation](https://github.com/ScreebApp/developers/wiki/Android-SDK-Group-assignation)
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/Android-SDK-Event-tracking)
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/Android-SDK-Screen-tracking)
-  * [Start survey](https://github.com/ScreebApp/developers/wiki/Android-SDK-Start-survey)
+  * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/Android-SDK-Start-Survey-Programmatically)
   * [Push notifications](https://github.com/ScreebApp/developers/wiki/Android-SDK-Push-Notifications)
 
 3- [iOS SDK](https://github.com/ScreebApp/developers/wiki/iOS-SDK-install)
@@ -23,7 +23,7 @@ Welcome to the documentation for developers. 👋
   * [Group assignation](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Group-assignation)
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Event-tracking)
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Screen-tracking)
-  * [Start survey](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Start-survey)
+  * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Start-Survey-Programmatically)
   * [Push notifications](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Push-Notifications)
 
 4- [React-Native SDK](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-install)
@@ -31,14 +31,14 @@ Welcome to the documentation for developers. 👋
   * [Group assignation](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Group-assignation)
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Event-tracking)
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Screen-tracking)
-  * [Start survey](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Start-survey)
+  * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Start-Survey-Programmatically)
 
 5- [Flutter SDK](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-install)
   * [Identity](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Identity)
   * [Group assignation](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Group-assignation)
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Event-tracking)
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Screen-tracking)
-  * [Start survey](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Start-survey)
+  * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Start-Survey-Programmatically)
 
 6- Connectors
   * [Webhook v1.3.0](https://github.com/ScreebApp/developers/wiki/Webhook-v1.3.0)
