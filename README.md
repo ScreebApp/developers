@@ -32,7 +32,7 @@ Welcome to the documentation for developers. 👋
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Event-tracking)
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Screen-tracking)
   * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Start-Survey-Programmatically)
-  * [Troubleshooting](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Troubleshooting.md)
+  * [Troubleshooting](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-Troubleshooting)
 
 5- [Flutter SDK](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-install)
   * [Identity](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Identity)
