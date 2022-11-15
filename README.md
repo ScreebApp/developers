@@ -8,6 +8,7 @@ Welcome to the documentation for developers. 👋
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Event-tracking)
   * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Start-Survey-Programmatically)
   * [Examples](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Examples)
+  * [Reference](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Reference)
   * [Troubleshooting](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Troubleshooting)
 
 2- [Android SDK](https://github.com/ScreebApp/developers/wiki/Android-SDK-install)
