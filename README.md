@@ -28,6 +28,7 @@ Welcome to the documentation for developers. 👋
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Screen-tracking)
   * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Start-Survey-Programmatically)
   * [Push notifications](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Push-Notifications)
+  * [Troubleshooting](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Troubleshooting)
   * [Changelogs](https://screeb.notion.site/iOS-SDK-4ad6756875a14f2eb60711b86150a29d)
 
 4- [React-Native SDK](https://github.com/ScreebApp/developers/wiki/React-Native-SDK-install)
