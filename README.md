@@ -19,6 +19,8 @@ Welcome to the documentation for developers. 👋
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/Android-SDK-Screen-tracking)
   * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/Android-SDK-Start-Survey-Programmatically)
   * [Push notifications](https://github.com/ScreebApp/developers/wiki/Android-SDK-Push-Notifications)
+  * [Reference](https://github.com/ScreebApp/developers/wiki/Android-SDK-Reference)
+  * [Troubleshooting](https://github.com/ScreebApp/developers/wiki/Android-SDK-Troubleshooting)
   * [Changelogs](https://screeb.notion.site/Android-SDK-4e588a60a5b94e40bfb44595c9defe60)
 
 3- [iOS SDK](https://github.com/ScreebApp/developers/wiki/iOS-SDK-install)
@@ -28,6 +30,7 @@ Welcome to the documentation for developers. 👋
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Screen-tracking)
   * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Start-Survey-Programmatically)
   * [Push notifications](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Push-Notifications)
+  * [Reference](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Reference)
   * [Troubleshooting](https://github.com/ScreebApp/developers/wiki/iOS-SDK-Troubleshooting)
   * [Changelogs](https://screeb.notion.site/iOS-SDK-4ad6756875a14f2eb60711b86150a29d)
 
