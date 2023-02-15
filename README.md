@@ -49,6 +49,8 @@ Welcome to the documentation for developers. 👋
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Event-tracking)
   * [Screen tracking](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Screen-tracking)
   * [Start survey programmatically](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Start-Survey-Programmatically)
+  * [Reference](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Reference)
+  * [Troubleshooting](https://github.com/ScreebApp/developers/wiki/Flutter-SDK-Troubleshooting)
   * [Changelogs](https://screeb.notion.site/Flutter-SDK-af72e1f601ac4785aa81bd13a61858c7)
 
 6- Connectors
