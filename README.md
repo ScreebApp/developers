@@ -2,7 +2,7 @@
 
 Welcome to the documentation for developers. 👋
 
-1- [Javascript SDK](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-install)
+1- [Javascript SDK - Tag](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-install)
   * [Identity](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Identity)
   * [Group assignation](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Group-assignation)
   * [Event tracking](https://github.com/ScreebApp/developers/wiki/Javascript-SDK-Event-tracking)
