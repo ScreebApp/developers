@@ -64,9 +64,11 @@ Welcome to the documentation for developers. 👋
   * [Changelogs](https://screeb.notion.site/Flutter-SDK-af72e1f601ac4785aa81bd13a61858c7)
 
 7- API and connectors
+  * [Webhook v2.0.0](https://github.com/ScreebApp/developers/wiki/Webhook-v2.0.0)
   * [Webhook v1.3.0](https://github.com/ScreebApp/developers/wiki/Webhook-v1.3.0)
-  * [Releases v1.0](https://github.com/ScreebApp/developers/wiki/Releases-API)
-  * [Stitch](https://github.com/ScreebApp/developers/wiki/Stitch)
+  * [Releases v1.0.0](https://github.com/ScreebApp/developers/wiki/Releases-API)
+  * [Stitch v2.0.0](https://github.com/ScreebApp/developers/wiki/Stitch-v2.0.0)
+  * [Stitch v1.0.0](https://github.com/ScreebApp/developers/wiki/Stitch)
 
 ## Support
 
