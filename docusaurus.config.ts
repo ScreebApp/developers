@@ -45,7 +45,7 @@ $screeb('init', 'c05786bb-1e67-4da8-ad89-f33acc29bc72');
 };
 
 const config: Config = {
-  title: 'Screeb Wiki',
+  title: 'Screeb',
   tagline: 'Screeb Developer doc',
   favicon: 'img/favicon.ico',
 
@@ -58,7 +58,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  projectName: 'screeb.github.io',
+  projectName: 'developers.screeb.app',
   organizationName: 'screeb',
   trailingSlash: false,
 
@@ -276,7 +276,7 @@ const config: Config = {
           ]
         },
         {
-          href: 'https://github.com/ScreebApp',
+          href: 'https://github.com/ScreebApp/developers',
           label: 'GitHub',
           position: 'right',
         },
