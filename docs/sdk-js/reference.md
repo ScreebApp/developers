@@ -1,0 +1,33 @@
+---
+sidebar_position: 8
+---
+
+# Reference
+
+## Introduction
+
+The reference is your key to a comprehensive understanding of the Screeb Javascript SDK.
+
+✨ **If this is your first look at the documentation, we recommend beginning with the [Getting started guide](./install).**
+
+## $screeb methods
+
+After injecting the Screeb Javascript SDK in your website, you will have access to a global `$screeb` object. `$screeb` methods are executed sequentially and return a `Promise`.
+
+Use the following syntaxt: `$screeb(method, argument1, argument2, ...)`.
+
+| Method  | Definition  | More  |
+|---|---|---|
+| `init`  | The `init` method starts the SDK and associates the current session to your Screeb project. Your website identifier must be passed. Optionally, this method can identify the current user. If no user identifier is provided, an anonymous visitor session is created. You will able to later change the current user by using the `identity` method.  | [👉](./identity)  |
+| `close`  | The `close` method shutdowns the Screeb SDK. It is the opposite to `init`.  | [👉](./install)  |
+| `debug`  | The `debug` method prints the current configuration of Screeb SDK, with website id, user id, session duration...  | [👉](./troubleshooting)  |
+| `identity`  | The `identity` method tells Screeb who the current user is. When Screeb is only installed on the logged page, please identify users using the `init` method instead. If your website has public pages, this method allows identifying users lazily, on user login.  | [👉](./identity)  |
+| `identity.properties`  | The `identity.properties` method associates some contextual properties to the current user session. You will be able to personalize surveys and target questions to the right audience.  | [👉](./identity)  |
+| `identity.group.assign`  | The `identity.group.assign` method assigns the current user to a Screeb segment. Some properties can be passed to the method to contextualize the segment.  | [👉](./group-assignation)  |
+| `identity.group.unassign`  | The `identity.group.unassign` method unassigns the current user from a Screeb segment.  | [👉](./group-assignation)  |
+| `identity.reset`  | The `identity.reset` method tells Screeb to reset the current user session and switch to an anonymous user. Please note it won't disable the Javascript SDK until you call the `close` command.  | [👉](./identity)  |
+| `identity.get`  | The `identity.get` method allows you to retrieve the current user identity.  | [👉](./identity)  |
+| `event.track`  | The `event.track` method tracks actions performed by current users, along with properties describing the event.  | [👉](./event-tracking)  |
+| `survey.start`  | The `survey.start` method starts a survey by providing its id. Optionally, this command can prevent a user to see a single survey multiple times. Please note that running a survey using `survey.start` will require a developer: to be autonomous, use the Screeb targeting engine instead.  | [👉](./start-survey-programmatically)  |
+| `survey.close`  | The `survey.close` method interrupts a survey.  | [👉](./start-survey-programmatically)  |
+| `targeting.debug`  | The `targeting.debug` method prints the status of each targeting rule for each survey of your account.  | [👉](./troubleshooting)  |
