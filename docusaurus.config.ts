@@ -278,7 +278,12 @@ const config: Config = {
         {
           to: 'https://help.screeb.app',
           label: 'Help Center',
-          position: 'left',
+          position: 'right',
+        },
+        {
+          to: 'https://changelog.screeb.app',
+          label: 'Changelog',
+          position: 'right',
         },
         {
           href: 'https://github.com/ScreebApp/developers',
