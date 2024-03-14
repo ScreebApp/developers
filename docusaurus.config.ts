@@ -217,7 +217,12 @@ const config: Config = {
     ],
     [require.resolve('docusaurus-lunr-search'),
     {
-      excludeRoutes: ['sdk-js/feature-flagging', 'sdk-js/device-tracking']
+      excludeRoutes: [
+        'sdk-js/feature-flagging',
+        'sdk-js/device-tracking',
+        'api-and-connectors/response-api',
+      ],
+      disableVersioning: true
     }
   ],
   ],
