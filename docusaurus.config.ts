@@ -46,7 +46,7 @@ $screeb('init', 'c05786bb-1e67-4da8-ad89-f33acc29bc72');
 
 const config: Config = {
   title: 'Screeb',
-  tagline: 'Screeb Developer doc',
+  tagline: 'Developer documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -82,7 +82,6 @@ const config: Config = {
     [
       'classic',
       {
-
         googleTagManager: gtm,
 
         docs: {
@@ -115,7 +114,7 @@ const config: Config = {
 
         versions: {
           current: {
-            label: 'SDK JS',
+            label: 'Javascript tag',
             badge: true,
           },
         },
@@ -131,7 +130,7 @@ const config: Config = {
 
         versions: {
           current: {
-            label: 'SDK Android',
+            label: 'Android SDK',
             badge: true,
           },
         },
@@ -147,7 +146,7 @@ const config: Config = {
 
         versions: {
           current: {
-            label: 'SDK IOS',
+            label: 'iOS SDK',
             badge: true,
           },
         },
@@ -163,7 +162,7 @@ const config: Config = {
 
         versions: {
           current: {
-            label: 'SDK React Native',
+            label: 'React Native SDK',
             badge: true,
           },
         },
@@ -179,7 +178,7 @@ const config: Config = {
 
         versions: {
           current: {
-            label: 'SDK Flutter',
+            label: 'Flutter SDK',
             badge: true,
           },
         },
@@ -235,17 +234,17 @@ const config: Config = {
       logo: {
         alt: 'Screeb Logo',
         src: 'img/favicon.png',
-        href: '/sdk-js/'
+        href: '/'
       },
       hideOnScroll: true,
       items: [
         {
           type: 'dropdown',
-          label: 'SDK',
+          label: 'SDKs',
           docsPluginId: 'sdk-js',
           items: [
             {
-              label: 'Javascript SDK',
+              label: 'Javascript tag',
               to: 'sdk-js',
             },
             {
@@ -281,18 +280,18 @@ const config: Config = {
           ]
         },
         {
-          to: 'https://help.screeb.app',
-          label: 'Help Center',
-          position: 'right',
-        },
-        {
           to: 'https://changelog.screeb.app',
           label: 'Changelog',
           position: 'right',
         },
         {
-          href: 'https://github.com/ScreebApp/developers',
-          label: 'GitHub',
+          to: 'https://help.screeb.app',
+          label: 'Help Center',
+          position: 'right',
+        },
+        {
+          href: 'https://admin.screeb.app',
+          label: 'Login',
           position: 'right',
         },
       ],
@@ -301,11 +300,23 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Getting Started',
           items: [
             {
               label: 'Documentation',
               to: '/',
+            },
+            {
+              label: 'User Guide',
+              href: 'https://help.screeb.app/',
+            },
+            {
+              label: 'Login',
+              href: 'https://admin.screeb.app/',
+            },
+            {
+              label: 'Signup',
+              href: 'https://screeb.app/pricing',
             },
           ],
         },

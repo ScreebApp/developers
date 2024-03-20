@@ -19,11 +19,11 @@ const sidebars: SidebarsConfig = {
   docSidebar: [
     {
       type: "category",
-      label: "IOS SDK",
+      label: "iOS SDK",
       collapsible: false,
       link: {
         type: "generated-index",
-        description: "install and configure the SDK on IOS devices",
+        description: "install and configure the SDK on iOS devices",
         slug: "/",
       },
       items: [

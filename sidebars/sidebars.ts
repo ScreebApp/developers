@@ -20,7 +20,7 @@ const sidebars: SidebarsConfig = {
     'home',
     {
       type: 'category',
-      label: 'Javascript SDK',
+      label: 'Javascript tag',
       link: {
         "type": "generated-index",
         "description": "install and configure the SDK"

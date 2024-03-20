@@ -4,7 +4,7 @@ slug: /
 
 # Developer documentation
 
-Welcome to the documentation for developers. 👋
+Welcome to the developer documentation. 👋
 
 1- [Javascript SDK - Tag](/sdk-js/install)
   * [Identity](./sdk-js/identity)

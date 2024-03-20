@@ -31,7 +31,7 @@ const sidebars: SidebarsConfig = {
   docSidebar: [
     {
       type: "category",
-      label: "Javascript SDK",
+      label: "Javascript tag",
       collapsible: false,
       link: {
         type: "generated-index",
