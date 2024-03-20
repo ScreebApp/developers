@@ -245,23 +245,23 @@ const config: Config = {
           docsPluginId: 'sdk-js',
           items: [
             {
-              label: 'SDK JS',
+              label: 'Javascript SDK',
               to: 'sdk-js',
             },
             {
-              label: 'SDK Android',
+              label: 'Android SDK',
               to: 'sdk-android',
             },
             {
-              label: 'SDK IOS',
+              label: 'iOS SDK',
               to: 'sdk-ios',
             },
             {
-              label: 'SDK React Native',
+              label: 'React Native SDK',
               to: 'sdk-react-native',
             },
             {
-              label: 'SDK Flutter',
+              label: 'Flutter SDK',
               to: 'sdk-flutter',
             },
             {
