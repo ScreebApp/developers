@@ -2,9 +2,7 @@
 slug: /
 ---
 
-# Home
-
-## Coder area!
+# Developer documentation
 
 Welcome to the documentation for developers. 👋
 
