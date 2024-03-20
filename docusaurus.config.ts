@@ -231,7 +231,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/logo.png',
     navbar: {
-      title: 'Screeb Wiki',
+      title: 'Documentation',
       logo: {
         alt: 'Screeb Logo',
         src: 'img/favicon.png',
