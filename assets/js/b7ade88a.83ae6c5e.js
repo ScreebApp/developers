@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkscreeb_docs=self.webpackChunkscreeb_docs||[]).push([[9707],{9684:e=>{e.exports=JSON.parse('{"title":"Private","description":"Private Documentation","slug":"/","permalink":"/private/","navigation":{"next":{"title":"SDK JS","permalink":"/private/sdk-js"}}}')}}]);
