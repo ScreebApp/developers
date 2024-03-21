@@ -191,7 +191,7 @@ const config: Config = {
         id: 'private',
         path: 'docs/private',
         routeBasePath: 'private',
-        sidebarPath: './sidebars/sidebar-private.ts',
+        sidebarPath: false,
 
         versions: {
           current: {
@@ -256,7 +256,8 @@ const config: Config = {
         },
         {
           type: 'docsVersionDropdown',
-          docspluginid: 'api-and-connectors',
+          docsPluginId: 'api-and-connectors',
+          label: 'API and Connectors',
           items: [
             {
               type: 'docSidebar',
