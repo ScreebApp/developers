@@ -1,6 +1,5 @@
 ---
-sidebar_position: 7
-sidebar_class_name: hidden
+sidebar_position: 3
 ---
 
 # Response API

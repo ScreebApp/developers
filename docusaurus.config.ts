@@ -2,29 +2,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 
-function filterHiddenDocs(items) {
-  return items.filter((item) => item.className !== 'hidden');
-}
-
-function filterHiddenSidebarItems(items) {
-  
-  return items.map((item) => {
-    //console.log(item);
-    
-    if (item.type === 'category') {
-      return {
-        ...item,
-        items: filterHiddenDocs(item.items),
-      };
-    }
-    return item
-  });
-}
-
-function filterHiddenCategoryDocPreview(docs) {
-  return docs.filter((doc) => doc.frontMatter["sidebar_class_name"] !== "hidden")
-}
-
 const gtm = {
   containerId: 'GTM-WS25WNNJ',
 };
@@ -89,12 +66,6 @@ const config: Config = {
           routeBasePath: '/',
 
           sidebarPath: false,
-          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
-            args.docs = filterHiddenCategoryDocPreview(args.docs);
-            const sidebarItems = await defaultSidebarItemsGenerator(args);
-            
-            return filterHiddenSidebarItems(sidebarItems);
-          },
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -214,12 +185,26 @@ const config: Config = {
         },
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'private',
+        path: 'docs/private',
+        routeBasePath: 'private',
+        sidebarPath: './sidebars/sidebar-private.ts',
+
+        versions: {
+          current: {
+            label: 'Private Documentation',
+            badge: true,
+          },
+        },
+      },
+    ],
     [require.resolve('docusaurus-lunr-search'),
     {
       excludeRoutes: [
-        'sdk-js/feature-flagging',
-        'sdk-js/device-tracking',
-        'api-and-connectors/response-api',
+        'private/**',
       ],
       disableVersioning: true
     }
@@ -241,7 +226,7 @@ const config: Config = {
         {
           type: 'dropdown',
           label: 'SDKs',
-          docsPluginId: 'sdk-js',
+          docspluginid: 'sdk-js',
           items: [
             {
               label: 'Javascript tag',
@@ -271,7 +256,7 @@ const config: Config = {
         },
         {
           type: 'docsVersionDropdown',
-          docsPluginId: 'api-and-connectors',
+          docspluginid: 'api-and-connectors',
           items: [
             {
               type: 'docSidebar',
