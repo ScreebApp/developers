@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Reelases API
+# Relases API
 
 You can integrate the creation of your releases into your current workflow using the Release API.
 
