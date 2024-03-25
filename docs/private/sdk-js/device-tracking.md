@@ -317,6 +317,7 @@ Triggering a survey on a user event will display the survey instantly.
 ```js
 $screeb('init', '<website-id>', {
   identity: {
+    id: "user-id-123",
     device: {
       properties: {
         firstname: '<user-firstname>',
@@ -373,9 +374,9 @@ If you need events or properties for analytics or response analysis in Screeb, y
 
 For applications having a high volumetry of events mainly used to display surveys, you should use the device tracking.
 
-|     | Screeb tracking | Device tracking |
-| --- | --- | --- |
-| 👍 | * Survey Advanced Targeting<br/> * Segment Analytics<br/> * Funnel Reports <br/>* Response Analysis based on user properties| * lower time to display surveys<br/> * higher volume of events used for survey displays |
-| 👎 | * higher delay to display a survey<br />* lower volumes of events allowed in your subscription | * Partial information on Screeb Homepage<br/> * No access to Segment Analytics, Funnel Reports<br />* No responses analysis based on user properties<br />* No variables in questions based on device properties |
+|     | Screeb tracking                                                                                                              | Device tracking                                                                                                                                                                                                  |
+| --- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 👍   | * Survey Advanced Targeting<br/> * Segment Analytics<br/> * Funnel Reports <br/>* Response Analysis based on user properties | * lower time to display surveys<br/> * higher volume of events used for survey displays                                                                                                                          |
+| 👎   | * higher delay to display a survey<br />* lower volumes of events allowed in your subscription                               | * Partial information on Screeb Homepage<br/> * No access to Segment Analytics, Funnel Reports<br />* No responses analysis based on user properties<br />* No variables in questions based on device properties |
 
 Identity properties and events cannot be declared twice, in different locations (Screeb or device). When a mix is necessary, please use a different name.
