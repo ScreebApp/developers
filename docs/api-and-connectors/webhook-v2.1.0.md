@@ -206,21 +206,23 @@ When the destination server replies with a 4xx or 5xx status code, Screeb platfo
 | name         | string         | Yes      | User name (when available in identity properties)  |
 | email        | string         | Yes      | User email (when available in identity properties) |
 | group_names  | Array\<string> | Yes      | User groups                                        |
+| properties   | object         | Yes      | Key/Value of user properties                       |
 
 ### Response
 
-| Field                   | type     | Optional | description                                                                           |
-| ----------------------- | -------- | -------- | ------------------------------------------------------------------------------------- |
-| id                      | uuid     | No       | Unique identifier for the response                                                    |
-| locale                  | string   | Yes      | Locale of the respondent                                                              |
-| time                    | Date     | No       | Date of response start                                                                |
-| time_ms                 | long     | No       | Timestamp of response start in millisecond                                            |
-| time_to_complete_second | long     | Yes      | Seconds between survey display and response end (when event_type == `response.ended`) |
-| completion              | string   | Yes      | "not_started", "partially_completed" or "fully_completed"                             |
-| hidden_fields           | object   | Yes      | Key/Value of the hidden fields                                                        |
-| question                | Question | Yes      | See the "Question" section (when event_type == `response.answered`)                   |
-| answer                  | Answer   | Yes      | See the "Answer" section (when event_type == `response.answered`)                     |
-| items                   | Item[]   | No       | See the "Item" section (when event_type == `response.answered`                        |  | event_type == `response.ended` ) |
+| Field                   | type     | Optional | description                                                                                        |
+| ----------------------- | -------- | -------- | -------------------------------------------------------------------------------------------------- |
+| id                      | uuid     | No       | Unique identifier for the response                                                                 |
+| locale                  | string   | Yes      | Locale of the respondent                                                                           |
+| time                    | Date     | No       | Date of response start                                                                             |
+| time_ms                 | long     | No       | Timestamp of response start in millisecond                                                         |
+| time_to_complete_second | long     | Yes      | Seconds between survey display and response end (when event_type == `response.ended`)              |
+| completion              | string   | Yes      | "not_started", "partially_completed" or "fully_completed"                                          |
+| context                 | object   | Yes      | Key/Value of context data                                                                          |
+| hidden_fields           | object   | Yes      | Key/Value of hidden fields                                                                         |
+| question                | Question | Yes      | See the "Question" section (when event_type == `response.answered`)                                |
+| answer                  | Answer   | Yes      | See the "Answer" section (when event_type == `response.answered`)                                  |
+| items                   | Item[]   | No       | See the "Item" section (when event_type == `response.answered` or event_type == `response.ended` ) |
 
 ### Question
 
