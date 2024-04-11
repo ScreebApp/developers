@@ -45,7 +45,9 @@ Stitch requires an immutable primary key for identifying rows. Screeb uses `even
 | `<integration>.data`                                                                                 | A table with response metadata (organization, channel, survey...). |
 | `<integration>.data__response__items`                                                                | A table with pairs of questions and answers.                       |
 | `<integration>.data__response__answer_fields` or `<integration>.data__response__items_answer_fields` | A table with question answer.                                      |
-| `<integration>.data__response__hidden_fields`                                                        | A table with your hidden fields linked to the response.            |
+| `<integration>.data__response__hidden_fields`                                                        | A table with hidden fields linked to the response.                 |
+| `<integration>.data__response__context`                                                              | A table with context data linked to the response.                  |
+| `<integration>.data__user__properties`                                                               | A table user properties snapshot linked to the response.           |
 
 ### `data` table
 
@@ -123,7 +125,7 @@ Stitch requires an immutable primary key for identifying rows. Screeb uses `even
 | `string`                   | text                     | Value of the field (string)                                      |
 | `time`                     | text                     | Value of the field (string)                                      |
 
-### `data__response__hidden_fields` table
+### `data__response__hidden_fields` + `data__response__context` + `data__user__properties` table
 
 | Column                     | Type                     | Description                                                    |
 | -------------------------- | ------------------------ | -------------------------------------------------------------- |
