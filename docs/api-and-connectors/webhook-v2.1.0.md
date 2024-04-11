@@ -39,9 +39,10 @@ On large synchronization order, the webhook destination may reply to Screeb with
 
 Properties can be nested. Eg:
 
-```json
+```js
 {
   // ...
+
   "context": {
     "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
     "browser": {
@@ -49,6 +50,7 @@ Properties can be nested. Eg:
       "version": "1.2.3"
     }
   },
+
   // ...
 }
 ```
