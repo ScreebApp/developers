@@ -37,6 +37,22 @@ On large synchronization order, the webhook destination may reply to Screeb with
 - `response.context`: contextual informations (url, browser, locale, timezone, screen size...)
 - `response.hidden_fields`: only for hidden fields created on response start
 
+Properties can be nested. Eg:
+
+```json
+{
+  // ...
+  "context": {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "browser": {
+      "name": "chrome",
+      "version": "1.2.3"
+    }
+  },
+  // ...
+}
+```
+
 ## Example payload
 
 Webhooks deliver the responses to your surveys in JSON format, via a POST HTTP request. Here is a typical webhook payload:
