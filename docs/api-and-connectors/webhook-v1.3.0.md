@@ -103,9 +103,9 @@ Webhooks deliver the responses to your surveys in JSON format, via a POST HTTP r
         },
         "replied_at": "2021-07-29T13:45:09.286Z",
         "replied_at_ms": 1627566309286,
-        "tags": ["screeb", "feedbback"]
+        "tags": ["screeb", "feedback"]
       },
-      "tags": ["screeb", "feedbback"],
+      "tags": ["screeb", "feedback"],
       "items": [
         { "question": {...}, "answer": {...} },
         { "question": {...}, "answer": {...} },
@@ -124,108 +124,108 @@ When the destination server replies with a 4xx or 5xx status code, Screeb platfo
 
 ### Metadata
 
-| Field | Type | Optional | description |
-|----------|-------------|------|----|
-| event_id | uuid | No | Unique id for this event (same id in retry request) |
-| event_type | enum: `response.displayed`, `response.answered` or `response.ended` | No | Type of event sent over webhook |
-| time | Date | No | Date of event |
-| time_ms | long | No | Timestamp of event in millisecond |
-| version | string | No | Semver version of the webhook payload |
-| payload | \<Payload> | No | See "Payload" section |
+| Field      | Type                                                                | Optional | description                                         |
+| ---------- | ------------------------------------------------------------------- | -------- | --------------------------------------------------- |
+| event_id   | uuid                                                                | No       | Unique id for this event (same id in retry request) |
+| event_type | enum: `response.displayed`, `response.answered` or `response.ended` | No       | Type of event sent over webhook                     |
+| time       | Date                                                                | No       | Date of event                                       |
+| time_ms    | long                                                                | No       | Timestamp of event in millisecond                   |
+| version    | string                                                              | No       | Semver version of the webhook payload               |
+| payload    | \<Payload>                                                          | No       | See "Payload" section                               |
 
 ### Payload
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| organization | Organization | No | Organization details |
-| channel | Channel | No | Channel details |
-| survey | Survey | No | Survey details |
-| respondent | Respondent | No | Respondent details |
-| response | Response | No | Response details |
+| Field        | type         | Optional | description          |
+| ------------ | ------------ | -------- | -------------------- |
+| organization | Organization | No       | Organization details |
+| channel      | Channel      | No       | Channel details      |
+| survey       | Survey       | No       | Survey details       |
+| respondent   | Respondent   | No       | Respondent details   |
+| response     | Response     | No       | Response details     |
 
 ### Organization
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| id | uuid | No | Unique identifier for the organization |
-| name | string | No | Name of the Screeb account |
+| Field | type   | Optional | description                            |
+| ----- | ------ | -------- | -------------------------------------- |
+| id    | uuid   | No       | Unique identifier for the organization |
+| name  | string | No       | Name of the Screeb account             |
 
 ### Channel
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| id | uuid | No | Unique identifier for the channel |
-| type | string | No | Channel type (widget, android, ios, hosted-page...) |
+| Field | type   | Optional | description                                         |
+| ----- | ------ | -------- | --------------------------------------------------- |
+| id    | uuid   | No       | Unique identifier for the channel                   |
+| type  | string | No       | Channel type (widget, android, ios, hosted-page...) |
 
 ### Survey
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| id | uuid | No | Unique identifier for the survey |
-| name | string | No | Name of the survey |
-| scenario_id | string | No | Unique identifier for the survey scenario |
-| scenario_version | int | No | Version number of the survey scenario |
-| scenario_time | Date | No | Date of the scenario edition |
-| scenario_time_ms | int | No | Timestamp of the scenario edition (millisecond) |
+| Field            | type   | Optional | description                                     |
+| ---------------- | ------ | -------- | ----------------------------------------------- |
+| id               | uuid   | No       | Unique identifier for the survey                |
+| name             | string | No       | Name of the survey                              |
+| scenario_id      | string | No       | Unique identifier for the survey scenario       |
+| scenario_version | int    | No       | Version number of the survey scenario           |
+| scenario_time    | Date   | No       | Date of the scenario edition                    |
+| scenario_time_ms | int    | No       | Timestamp of the scenario edition (millisecond) |
 
 ### Respondent
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| id | uuid | No | Screeb identifier for the respondent |
-| alias | Array\<string> | No | Main respondent identifier |
-| aliases | Array\<string> | No | List of respondent aliases |
-| name | string | Yes | Respondent name (when available in identity properties) |
-| email | string | Yes | Respondent email (when available in identity properties) |
-| group_names | Array\<string> | Yes | Respondent groups |
+| Field       | type           | Optional | description                                              |
+| ----------- | -------------- | -------- | -------------------------------------------------------- |
+| id          | uuid           | No       | Screeb identifier for the respondent                     |
+| alias       | Array\<string> | No       | Main respondent identifier                               |
+| aliases     | Array\<string> | No       | List of respondent aliases                               |
+| name        | string         | Yes      | Respondent name (when available in identity properties)  |
+| email       | string         | Yes      | Respondent email (when available in identity properties) |
+| group_names | Array\<string> | Yes      | Respondent groups                                        |
 
 ### Response
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| id | uuid | No | Unique identifier for the response |
-| locale | string | Yes | Locale of the respondent |
-| time | Date | No | Date of response start |
-| time_ms | long | No | Timestamp of response start in millisecond |
-| time_to_complete_second | long | Yes | Seconds between survey display and response end (when event_type == `response.ended`) |
-| completion | string | Yes | "not_started", "partially_completed" or "fully_completed" |
-| hidden_fields | object | Yes | Key/Value of the hidden fields |
-| question | Question | Yes | See the "Question" section (when event_type == `response.answered`) |
-| answer | Answer | Yes | See the "Answer" section (when event_type == `response.answered`) |
-| items | Item[] | No | See the "Item" section (when event_type == `response.answered` || event_type == `response.ended` ) |
+| Field                   | type     | Optional | description                                                                           |
+| ----------------------- | -------- | -------- | ------------------------------------------------------------------------------------- |
+| id                      | uuid     | No       | Unique identifier for the response                                                    |
+| locale                  | string   | Yes      | Locale of the respondent                                                              |
+| time                    | Date     | No       | Date of response start                                                                |
+| time_ms                 | long     | No       | Timestamp of response start in millisecond                                            |
+| time_to_complete_second | long     | Yes      | Seconds between survey display and response end (when event_type == `response.ended`) |
+| completion              | string   | Yes      | "not_started", "partially_completed" or "fully_completed"                             |
+| hidden_fields           | object   | Yes      | Key/Value of the hidden fields                                                        |
+| question                | Question | Yes      | See the "Question" section (when event_type == `response.answered`)                   |
+| answer                  | Answer   | Yes      | See the "Answer" section (when event_type == `response.answered`)                     |
+| items                   | Item[]   | No       | See the "Item" section (when event_type == `response.answered`                        |  | event_type == `response.ended` ) |
 
 ### Question
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| id | uuid | No | Unique identifier for the question |
-| correlation_id | uuid | No | Correlation identifier for the question (shared over many survey scenario versions) |
-| type | string | No | Type of question |
-| title | string | No | Label of the question |
+| Field          | type   | Optional | description                                                                         |
+| -------------- | ------ | -------- | ----------------------------------------------------------------------------------- |
+| id             | uuid   | No       | Unique identifier for the question                                                  |
+| correlation_id | uuid   | No       | Correlation identifier for the question (shared over many survey scenario versions) |
+| type           | string | No       | Type of question                                                                    |
+| title          | string | No       | Label of the question                                                               |
 
 ### Answer
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| field.id | uuid | No | Unique identifier for the field (a button, a score, an input...) |
-| field.correlation_id | uuid | No | Correlation identifier for the field (shared over many survey scenario versions) |
-| field.type | string | No | Value type: "string", "number", "time", "boolean"... |
-| field.value | string | No | DEPRECATED: Value of the answer (always string) |
-| field.text | string | Yes | Value of the answer, when type is "string" |
-| field.number | number | Yes | Value of the answer, when type is "number" |
-| field.boolean | string | Yes | Value of the answer, when type is "boolean" |
-| field.time | string | Yes | Value of the answer, when type is "time" |
-| replied_at | Date | No | Date of the answer |
-| replied_at_ms | int | No | Timestamp of the answer (millisecond) |
+| Field                | type   | Optional | description                                                                      |
+| -------------------- | ------ | -------- | -------------------------------------------------------------------------------- |
+| field.id             | uuid   | No       | Unique identifier for the field (a button, a score, an input...)                 |
+| field.correlation_id | uuid   | No       | Correlation identifier for the field (shared over many survey scenario versions) |
+| field.type           | string | No       | Value type: "string", "number", "time", "boolean"...                             |
+| field.value          | string | No       | DEPRECATED: Value of the answer (always string)                                  |
+| field.text           | string | Yes      | Value of the answer, when type is "string"                                       |
+| field.number         | number | Yes      | Value of the answer, when type is "number"                                       |
+| field.boolean        | string | Yes      | Value of the answer, when type is "boolean"                                      |
+| field.time           | string | Yes      | Value of the answer, when type is "time"                                         |
+| replied_at           | Date   | No       | Date of the answer                                                               |
+| replied_at_ms        | int    | No       | Timestamp of the answer (millisecond)                                            |
 
 NPS, CES and CSAT will be sent as numeric values, instead of emojis.
 
 ### Item
 
-| Field | type | Optional | description |
-|----------|-------------|------|----|
-| question | Question | No | See the "Question" section |
-| answer | Answer | No | See the "Answer" section |
+| Field    | type     | Optional | description                |
+| -------- | -------- | -------- | -------------------------- |
+| question | Question | No       | See the "Question" section |
+| answer   | Answer   | No       | See the "Answer" section   |
 
 ## Security
 

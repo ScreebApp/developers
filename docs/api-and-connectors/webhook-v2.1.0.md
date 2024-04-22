@@ -150,9 +150,9 @@ Webhooks deliver the responses to your surveys in JSON format, via a POST HTTP r
         ],
         "replied_at": "2021-07-29T13:45:09.286Z",
         "replied_at_ms": 1627566309286,
-        "tags": ["screeb", "feedbback"]
+        "tags": ["screeb", "feedback"]
       },
-      "tags": ["screeb", "feedbback"],
+      "tags": ["screeb", "feedback"],
       "items": [
         { "question": {...}, "answer": {...} },
         { "question": {...}, "answer": {...} },
