@@ -24,6 +24,8 @@ Example:
 </script>
 ```
 
+You can find this identifier in you workspace settings, (see [Install Screeb section](https://admin.screeb.app/org/last/settings/install)).
+
 ### About tag lifecycle
 
 After the script tag is inserted into your page, you must call the `init` command, with your website ID (given in Screeb app). If no identity is specified, an anonymous Screeb session will be created (see [identity](./identity) section).
