@@ -9,7 +9,7 @@ You can assign groups to your users, along with properties describing the group.
 <u>Requirements:</u>
 
 * Group type and group name must be less than 128 characters long.
-* Authorized characters are alphanumeric (uppercase included) and you can insert the following special characters: '-' , '_' and ' ' (space).
+* Authorized characters are alphanumeric (uppercase included) and you can insert the following special characters: '-', '_', '.', ' ' (space), '/', and ':'.
 
 ```kotlin
 Screeb.assignGroup("company", "Apple")

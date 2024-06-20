@@ -9,7 +9,7 @@ You can track actions performed by your users, along with properties describing 
 <u>Requirements:</u>
 
 * Event names must be less than 128 characters long.
-* Authorized characters are alphanumeric (uppercase included) and you can insert the following special characters: '-' , '_' and ' ' (space).
+* Authorized characters are alphanumeric (uppercase included) and you can insert the following special characters: '-', '_', '.', ' ' (space), '/', and ':'.
 
 ```js
 $screeb('event.track', 'Product added to cart');
