@@ -8,7 +8,6 @@ sidebar_position: 3
 
 - [Authentication](#authentication)
 - [Response retrieval](#response-retrieval)
-- [Response aggregation](#response-aggregation)
 
 ## Authentication
 
