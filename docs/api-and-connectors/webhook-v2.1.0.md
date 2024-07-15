@@ -89,7 +89,7 @@ Webhooks deliver the responses to your surveys in JSON format, via a POST HTTP r
       "name": "Samuel Berthe",
       "email": "samuel@screeb.app",
       "group_names": ["Screeb", "10-100-companies", "plan-enterprise"],
-      "hidden_fields": {
+      "properties": {
         "firstname": "Samuel",
         "lastname": "Berthe",
         "email": "samuel@screeb.app",
