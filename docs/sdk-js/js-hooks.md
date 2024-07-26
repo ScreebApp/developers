@@ -15,12 +15,18 @@ You can define hooks on `init` and `survey.start` commands. Hooks are all option
 Available hooks are:
 
 - `onSurveyShowed`: called when a survey is showed
+- `onMessageShowed`: called when a message is showed
 - `onSurveyStarted`: called when a survey is started
+- `onMessageStarted`: called when a message is started
 - `onQuestionReplied`: called when a question is replied
 - `onSurveyCompleted`: called when a survey is completed
+- `onMessageCompleted`: called when a message is completed
 - `onSurveyHidden`: called when a survey is hidden
+- `onMessageHidden`: called when a message is hidden
 - `onAppStoreRatingTriggered`: called when an App Store Rating question is triggered.
 - `onReady`: called when the SDK is ready (Only available on `init`)
+- `onSurveyDisplayAllowed`: called before a survey display to allow it or not (Only available on `init`)
+- `onMessageDisplayAllowed`: called before a message display to allow it or not (Only available on `init`)
 
 ### Set hooks on widget init
 
@@ -31,8 +37,14 @@ $screeb('init', '<website-id>', {
     onSurveyShowed: (payload) => {
         console.log("Survey has been showed", payload);
     },
+    onMessageShowed: (payload) => {
+        console.log("Message has been showed", payload);
+    },
     onSurveyStarted: (payload) => {
         console.log("Survey has been started", payload);
+    },
+    onMessageStarted: (payload) => {
+        console.log("Message has been started", payload);
     },
     onQuestionReplied: (payload) => {
         console.log("Question has been replied", payload);
@@ -40,7 +52,13 @@ $screeb('init', '<website-id>', {
     onSurveyCompleted: (payload) => {
         console.log("Survey has been completed", payload);
     },
+    onMessageCompleted: (payload) => {
+        console.log("Survey has been completed", payload);
+    },
     onSurveyHidden: (payload) => {
+        console.log("Survey has been hidden", payload);
+    },
+    onMessageHidden: (payload) => {
         console.log("Survey has been hidden", payload);
     },
     onAppStoreRatingTriggered: (payload) => {
@@ -48,6 +66,14 @@ $screeb('init', '<website-id>', {
     },
     onReady: (payload) => {
         console.log("Screeb ready", payload);
+    },
+    onSurveyDisplayAllowed: function (payload) {
+        // return false to prevent display
+        return true;
+    },
+    onMessageDisplayAllowed: function (payload) {
+        // return false to prevent display
+        return true;
     },
   }
 });
@@ -62,7 +88,13 @@ $screeb("survey.start", "<survey-id>", {
     onSurveyShowed: (payload) => {
         console.log("Survey has been showed", payload);
     },
+    onMessageShowed: (payload) => {
+        console.log("Survey has been showed", payload);
+    },
     onSurveyStarted: (payload) => {
+        console.log("Survey has been started", payload);
+    },
+    onMessageStarted: (payload) => {
         console.log("Survey has been started", payload);
     },
     onQuestionReplied: (payload) => {
@@ -71,7 +103,13 @@ $screeb("survey.start", "<survey-id>", {
     onSurveyCompleted: (payload) => {
         console.log("Survey has been completed", payload);
     },
+    onMessageCompleted: (payload) => {
+        console.log("Survey has been completed", payload);
+    },
     onSurveyHidden: (payload) => {
+        console.log("Survey has been hidden", payload);
+    },
+    onMessageHidden: (payload) => {
         console.log("Survey has been hidden", payload);
     },
     onAppStoreRatingTriggered: (payload) => {
@@ -293,6 +331,34 @@ onReady: {
     channel: {
         id: string,
         type: "widget"
+    },
+    user: {
+        anonymous_id: string,
+        user_id: string,
+    }
+}
+
+onSurveyDisplayAllowed: {
+    channel: {
+        id: string,
+        type: "widget"
+    },
+    survey: {
+        id: string,
+    },
+    user: {
+        anonymous_id: string,
+        user_id: string,
+    }
+}
+
+onMessageDisplayAllowed: {
+    channel: {
+        id: string,
+        type: "widget"
+    },
+    message: {
+        id: string,
     },
     user: {
         anonymous_id: string,
