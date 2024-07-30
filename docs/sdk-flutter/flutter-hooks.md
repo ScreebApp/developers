@@ -36,6 +36,10 @@ PluginScreeb.initSdk(
       "onReady": (dynamic data) {
         log("onReady $data");
       },
+      "onSurveyDisplayAllowed": (dynamic data) {
+        log("onSurveyDisplayAllowed $data");
+        return true;
+      },
     });
 ```
 

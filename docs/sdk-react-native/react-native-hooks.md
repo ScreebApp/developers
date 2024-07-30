@@ -58,6 +58,10 @@ startSurvey(
     onSurveyShowed: (payload: any) => {
       console.log("onSurveyShowed", payload);
     },
+    onSurveyDisplayAllowed: (payload: any) => {
+      console.log("onSurveyDisplayAllowed", payload);
+      return true;
+    },
   }
 );
 ```

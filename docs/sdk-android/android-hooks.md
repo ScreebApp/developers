@@ -43,7 +43,8 @@ Screeb.initSdk(this,
     ),
     hashMapOf(
         "version" to "1.0.0",
-        "onReady" to { payload:Any -> Log.d("Screeb", "SDK Ready: $payload")}
+        "onReady" to { payload:Any -> Log.d("Screeb", "SDK Ready: $payload")},
+        "onSurveyDisplayAllowed" to { payload:Any -> true}
     )
 )
 ```

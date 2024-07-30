@@ -46,7 +46,11 @@ Screeb.startSurvey(
         "iosHidden1": AnyEncodable("hiddenField1"),
         "iosHiddenCount": AnyEncodable(75)
     ],
-    hooks: ["version": "1.0.0","onSurveyShowed":{(e:Any) -> () in print("Screeb survey showed " + String(describing: e))}]
+    hooks: [
+        "version": "1.0.0",
+        "onSurveyShowed": {(e:Any) -> () in print("Screeb survey showed " + String(describing: e))},
+        "onSurveyDisplayAllowed": {(e:Any) -> Bool in print("Screeb survey display allowed " + String(describing: e)); return true}
+    ]
 )
 ```
 
