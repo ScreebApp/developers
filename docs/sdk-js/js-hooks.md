@@ -31,89 +31,91 @@ Available hooks are:
 ### Set hooks on widget init
 
 ```js
-$screeb('init', '<website-id>', {
+$screeb("init", "<website-id>", {
   hooks: {
     version: "1.0.0",
     onSurveyShowed: (payload) => {
-        console.log("Survey has been showed", payload);
+      console.log("Survey has been showed", payload);
     },
     onMessageShowed: (payload) => {
-        console.log("Message has been showed", payload);
+      console.log("Message has been showed", payload);
     },
     onSurveyStarted: (payload) => {
-        console.log("Survey has been started", payload);
+      console.log("Survey has been started", payload);
     },
     onMessageStarted: (payload) => {
-        console.log("Message has been started", payload);
+      console.log("Message has been started", payload);
     },
     onQuestionReplied: (payload) => {
-        console.log("Question has been replied", payload);
+      console.log("Question has been replied", payload);
     },
     onSurveyCompleted: (payload) => {
-        console.log("Survey has been completed", payload);
+      console.log("Survey has been completed", payload);
     },
     onMessageCompleted: (payload) => {
-        console.log("Survey has been completed", payload);
+      console.log("Survey has been completed", payload);
     },
     onSurveyHidden: (payload) => {
-        console.log("Survey has been hidden", payload);
+      console.log("Survey has been hidden", payload);
     },
     onMessageHidden: (payload) => {
-        console.log("Survey has been hidden", payload);
+      console.log("Survey has been hidden", payload);
     },
     onAppStoreRatingTriggered: (payload) => {
-        console.log("App Store Rating triggered", payload);
+      console.log("App Store Rating triggered", payload);
     },
     onReady: (payload) => {
-        console.log("Screeb ready", payload);
+      console.log("Screeb ready", payload);
     },
     onSurveyDisplayAllowed: function (payload) {
-        // return false to prevent display
-        return true;
+      console.log("onSurveyDisplayAllowed", payload);
+      // return false to prevent display
+      return true;
     },
     onMessageDisplayAllowed: function (payload) {
-        // return false to prevent display
-        return true;
+      console.log("onMessageDisplayAllowed", payload);
+      // return false to prevent display
+      return true;
     },
-  }
+  },
 });
 ```
 
 ### Set hooks on survey start
 
-```js 
+```js
 $screeb("survey.start", "<survey-id>", {
   hooks: {
     version: "1.0.0",
     onSurveyShowed: (payload) => {
-        console.log("Survey has been showed", payload);
+      console.log("Survey has been showed", payload);
     },
     onMessageShowed: (payload) => {
-        console.log("Survey has been showed", payload);
+      console.log("Survey has been showed", payload);
     },
     onSurveyStarted: (payload) => {
-        console.log("Survey has been started", payload);
+      console.log("Survey has been started", payload);
     },
     onMessageStarted: (payload) => {
-        console.log("Survey has been started", payload);
+      console.log("Survey has been started", payload);
     },
     onQuestionReplied: (payload) => {
-        console.log("Question has been replied", payload);
+      console.log("Question has been replied", payload);
     },
     onSurveyCompleted: (payload) => {
-        console.log("Survey has been completed", payload);
+      console.log("Survey has been completed", payload);
     },
     onMessageCompleted: (payload) => {
-        console.log("Survey has been completed", payload);
+      console.log("Survey has been completed", payload);
     },
     onSurveyHidden: (payload) => {
-        console.log("Survey has been hidden", payload);
+      console.log("Survey has been hidden", payload);
     },
     onMessageHidden: (payload) => {
-        console.log("Survey has been hidden", payload);
+      console.log("Survey has been hidden", payload);
     },
     onAppStoreRatingTriggered: (payload) => {
-        console.log("App Store Rating triggered", payload);
+      console.log("App Store Rating triggered", payload);
     },
   },
 });

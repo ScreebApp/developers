@@ -41,6 +41,11 @@ initSdk(
     onReady: (payload: any) => {
       console.log("onReady", payload);
     },
+    onSurveyDisplayAllowed: (payload: any) => {
+      console.log("onSurveyDisplayAllowed", payload);
+      // return false to prevent display
+      return true;
+    },
   }
 );
 ```
@@ -57,10 +62,6 @@ startSurvey(
     version: "1.0.0",
     onSurveyShowed: (payload: any) => {
       console.log("onSurveyShowed", payload);
-    },
-    onSurveyDisplayAllowed: (payload: any) => {
-      console.log("onSurveyDisplayAllowed", payload);
-      return true;
     },
   }
 );

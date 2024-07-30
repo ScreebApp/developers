@@ -32,7 +32,11 @@ Screeb.initSdk(
     identity: "<user-id>", // optional
     visitorProperty: ["age": AnyEncodable(12), "name": AnyEncodable("JohnDoe")], // optional
     initOptions: InitOptions(automaticScreenDetection: true|false), // optional
-    hooks: ["version": "1.0.0","onReady": {(e:Any) -> () in print("Screeb sdk ready " + String(describing: e))}]
+    hooks: [
+        "version": "1.0.0",
+        "onReady": {(e:Any) -> () in print("Screeb sdk ready " + String(describing: e))},
+        "onSurveyDisplayAllowed": {(e:Any) -> Bool in print("onSurveyDisplayAllowed " + String(describing: e)); return true}
+    ]
 )
 ```
 
@@ -49,7 +53,6 @@ Screeb.startSurvey(
     hooks: [
         "version": "1.0.0",
         "onSurveyShowed": {(e:Any) -> () in print("Screeb survey showed " + String(describing: e))},
-        "onSurveyDisplayAllowed": {(e:Any) -> Bool in print("Screeb survey display allowed " + String(describing: e)); return true}
     ]
 )
 ```
