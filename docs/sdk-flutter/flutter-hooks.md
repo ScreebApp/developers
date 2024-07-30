@@ -20,6 +20,8 @@ Available hooks are:
 - `onSurveyCompleted`: called when a survey is completed
 - `onSurveyHidden`: called when a survey is hidden
 - `onReady`: called when the SDK is ready (Only available on `PluginScreeb.initSdk()`)
+- `onSurveyDisplayAllowed`: called before a survey display to allow it or not (Only available on `PluginScreeb.initSdk()`)
+- `onMessageDisplayAllowed`: called before a message display to allow it or not (Only available on `PluginScreeb.initSdk()`)
 
 ### Set hooks on SDK init
 
@@ -254,6 +256,34 @@ onReady: {
     channel: {
         id: string,
         type: "android" | "ios"
+    },
+    user: {
+        anonymous_id: string,
+        user_id: string,
+    }
+}
+
+onSurveyDisplayAllowed: {
+    channel: {
+        id: string,
+        type: "widget"
+    },
+    survey: {
+        id: string,
+    },
+    user: {
+        anonymous_id: string,
+        user_id: string,
+    }
+}
+
+onMessageDisplayAllowed: {
+    channel: {
+        id: string,
+        type: "widget"
+    },
+    message: {
+        id: string,
     },
     user: {
         anonymous_id: string,

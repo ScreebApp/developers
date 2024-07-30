@@ -20,44 +20,46 @@ Available hooks are:
 - `onSurveyCompleted`: called when a survey is completed
 - `onSurveyHidden`: called when a survey is hidden
 - `onReady`: called when the SDK is ready (Only available on `initSdk()`)
+- `onSurveyDisplayAllowed`: called before a survey display to allow it or not (Only available on `initSdk()`)
+- `onMessageDisplayAllowed`: called before a message display to allow it or not (Only available on `initSdk()`)
 
 ### Set hooks on SDK init
 
 ```js
 initSdk(
-      "<android-channel-id>",
-      "<ios-channel-id>",
-      "<user-id>",
-      {
-        'isConnected': false,
-        'age': 29,
-        'product': 'iPhone 13',
-        'email': 'e2e@screeb.app',
-      },
-      {
-        version: "1.0.0",
-        onReady: (payload: any) => {
-          console.log("onReady", payload);
-        },
-      }
-    );
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {
+    isConnected: false,
+    age: 29,
+    product: "iPhone 13",
+    email: "e2e@screeb.app",
+  },
+  {
+    version: "1.0.0",
+    onReady: (payload: any) => {
+      console.log("onReady", payload);
+    },
+  }
+);
 ```
 
 ### Set hooks on survey start
 
 ```js
 startSurvey(
-      "<survey-id>",
-      "<allowMultipleResponses>",
-      "<properties>",
-      "<ignoreSurveyStatus>",
-      {
-        version: "1.0.0",
-        onSurveyShowed: (payload: any) => {
-          console.log("onSurveyShowed", payload);
-        },
-      }
-    );
+  "<survey-id>",
+  "<allowMultipleResponses>",
+  "<properties>",
+  "<ignoreSurveyStatus>",
+  {
+    version: "1.0.0",
+    onSurveyShowed: (payload: any) => {
+      console.log("onSurveyShowed", payload);
+    },
+  }
+);
 ```
 
 ### Payload types
@@ -261,6 +263,34 @@ onReady: {
     channel: {
         id: string,
         type: "android" | "ios"
+    },
+    user: {
+        anonymous_id: string,
+        user_id: string,
+    }
+}
+
+onSurveyDisplayAllowed: {
+    channel: {
+        id: string,
+        type: "widget"
+    },
+    survey: {
+        id: string,
+    },
+    user: {
+        anonymous_id: string,
+        user_id: string,
+    }
+}
+
+onMessageDisplayAllowed: {
+    channel: {
+        id: string,
+        type: "widget"
+    },
+    message: {
+        id: string,
     },
     user: {
         anonymous_id: string,
