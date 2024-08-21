@@ -25,7 +25,7 @@ Screeb.startSurvey(
 )
 ```
 
-## Respect survey status?
+## Respect survey status?
 
 By default, using manual survey start will ignore the survey status. If you want to respect the survey status, you can add the `ignoreSurveyStatus` argument and set it to `false`:
 

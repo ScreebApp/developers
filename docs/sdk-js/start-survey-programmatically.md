@@ -22,7 +22,7 @@ If current user already replied to your survey and you would rather not display 
 $screeb("survey.start", "<SURVEY_ID>", { allow_multiple_responses: false });
 ```
 
-## Respect survey status?
+## Respect survey status?
 
 By default, using manual survey start will ignore the survey status. If you want to respect the survey status, you can add the `ignore_survey_status` argument and set it to `false`:
 

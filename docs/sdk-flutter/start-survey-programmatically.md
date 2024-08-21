@@ -22,7 +22,7 @@ If current user already replied to your survey and you would rather not display 
 PluginScreeb.startSurvey("<survey-id>", false);
 ```
 
-## Respect survey status?
+## Respect survey status?
 
 By default, using manual survey start will ignore the survey status. If you want to respect the survey status, you can add the `ignoreSurveyStatus` argument and set it to `false`:
 
