@@ -26,6 +26,16 @@ import { startSurvey } from "@screeb/react-native";
 startSurvey("<survey-id>", false);
 ```
 
+## Respect survey status?
+
+By default, using manual survey start will ignore the survey status. If you want to respect the survey status, you can add the `ignoreSurveyStatus` argument and set it to `false`:
+
+```js
+import { startSurvey } from "@screeb/react-native";
+
+startSurvey("<survey-id>", null, null, false);
+```
+
 ## Contextualize response
 
 The `startSurvey` command accepts a list of hidden fields. Values passed as parameters will be listed alongside the responses, on the Screeb platform.
@@ -34,7 +44,7 @@ The `startSurvey` command accepts a list of hidden fields. Values passed as para
 import { startSurvey } from "@screeb/react-native";
 
 startSurvey("<survey-id>", true, {
-    color: "red",
-    size: 42
+  color: "red",
+  size: 42,
 });
 ```
