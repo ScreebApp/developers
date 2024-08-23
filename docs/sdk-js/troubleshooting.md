@@ -37,7 +37,7 @@ You want to display Screeb surveys while being sure your app is secured and prot
 Your CSP should -at least- look like this: 
 
 ```
-default-src 'unsafe-inline' https://*.screeb.app wss://*.screeb.app; prefetch-src https://*.screeb.app; font-src blob:
+default-src 'unsafe-inline' https://*.screeb.app wss://*.screeb.app; prefetch-src https://*.screeb.app; media-src https://*.screeb.app; font-src blob:
 ```
 
 And don't forget to add your own domains.
@@ -45,5 +45,5 @@ And don't forget to add your own domains.
 An example:
 
 ```
-content-security-policy: default-src https: 'unsafe-eval' 'unsafe-inline' https://*.screeb.app wss://*.screeb.app; object-src 'self'; report-uri /csp-violation-report; frame-ancestors 'self' https://admin.example.com https://vip.example.com; prefetch-src https://*.screeb.app; font-src blob:
+content-security-policy: default-src https: 'unsafe-eval' 'unsafe-inline' https://*.screeb.app wss://*.screeb.app; object-src 'self'; report-uri /csp-violation-report; frame-ancestors 'self' https://admin.example.com https://vip.example.com; prefetch-src https://*.screeb.app; media-src https://*.screeb.app; font-src blob:
 ```
