@@ -42,6 +42,16 @@ This command must be called only once, since it creates a new identity on Screeb
 Screeb.resetIdentity()
 ```
 
+### Ignore anonymous user
+
+If you want to ignore anonymous users and only track identified users, you can use the `ignore Anonymous` option. This will ensure that no data is collected for users who have not been identified.
+
+To Activate the `ignore Anonymous` option, go to your screeb workspace settings and set the `ignore Anonymous` option to `true`.
+([go to your workspace Settings](https://admin.screeb.app/org/last/settings/behaviour))
+
+
+By setting `ignore Anonymous` to `true`, the widget will not collect any data until the `identity` command is called with a unique visitor identifier.
+
 ## Attributes
 
 Screeb allows tracking some custom data about your website visitors. Those properties can be inserted as "hidden fields" in your surveys or can be used for an advanced targeting rule.
