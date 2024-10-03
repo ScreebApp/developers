@@ -155,21 +155,21 @@ const config: Config = {
         },
       },
     ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'npm-packages',
-        path: 'docs/npm-packages',
-        routeBasePath: 'npm-packages',
+    // [
+    //   '@docusaurus/plugin-content-docs',
+    //   {
+    //     id: 'npm-packages',
+    //     path: 'docs/npm-packages',
+    //     routeBasePath: 'npm-packages',
 
-        versions: {
-          current: {
-            label: 'NPM Packages',
-            badge: true,
-          },
-        },
-      },
-    ],
+    //     versions: {
+    //       current: {
+    //         label: 'NPM Packages',
+    //         badge: true,
+    //       },
+    //     },
+    //   },
+    // ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -248,10 +248,10 @@ const config: Config = {
               label: 'Flutter SDK',
               to: 'sdk-flutter',
             },
-            {
-              label: 'NPM Packages',
-              to: 'npm-packages',
-            },
+            // {
+            //   label: 'NPM Packages',
+            //   to: 'npm-packages',
+            // },
           ]
         },
         {

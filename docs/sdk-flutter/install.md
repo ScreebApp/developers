@@ -96,21 +96,3 @@ At any time, you can disable the Screeb SDK with the following command:
 ```dart
 PluginScreeb.close()
 ```
-
-## Next steps
-
-### 1- Identify visitors
-
-[See here.](./identity)
-
-### 2- Event tracking
-
-[See here.](./event-tracking)
-
-### 3- Screen tracking
-
-[See here.](./screen-tracking)
-
-### 4- Start the survey programmatically
-
-[See here.](./start-survey-programmatically)

@@ -6,9 +6,19 @@ sidebar_position: 1
 
 ## How to add the Screeb tag to your website?
 
-First, log in to the Screeb application, then create your first survey.
+The Screeb tag is a small piece of JavaScript code that you can add to your website to enable Screeb features.
 
-When your survey is ready to share, we will provide a javascript snippet to copy at the end of your HTML page (before `</body>`).
+### Using HTML
+
+There is many ways to add the Screeb tag to your website. The most common way is to add the tag directly to your website's HTML code.
+
+For that, you need to copy the Screeb tag code and paste it into your website's HTML code.
+You can find this code in your workspace settings, (see [Install Screeb section](https://admin.screeb.app/org/last/settings/install)).
+
+
+> :warning: Pay Attention to the identifier `<website-id>` in the tag code. This identifier is unique per Screeb workspace.
+
+Paste the tag at the end of your HTML page (before `</body>`).
 
 Example:
 
@@ -24,9 +34,14 @@ Example:
 </script>
 ```
 
-You can find this identifier in you workspace settings, (see [Install Screeb section](https://admin.screeb.app/org/last/settings/install)).
+### Using Packages
 
-### About tag lifecycle
+If your app is built with a custom framework, you can install the right Screeb package for you and import it in your code.
+[See NPM Packages.](./npm-packages)
+
+## About tag lifecycle
+
+### Initialization
 
 After the script tag is inserted into your page, you must call the `init` command, with your website ID (given in Screeb app). If no identity is specified, an anonymous Screeb session will be created (see [identity](./identity) section).
 
@@ -34,22 +49,10 @@ After the script tag is inserted into your page, you must call the `init` comman
 $screeb('init', '<website-id>');
 ```
 
+### deactivation
+
 At any time, you can disable the Screeb tag with the following command:
 
 ```js
 $screeb('close');
 ```
-
-## Next steps
-
-### 1- Identify visitors
-
-[See here.](./identity)
-
-### 2- Event tracking
-
-[See here.](./event-tracking)
-
-### 3- Start the survey programmatically
-
-[See here.](./start-survey-programmatically)
