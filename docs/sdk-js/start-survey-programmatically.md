@@ -30,6 +30,16 @@ By default, using manual survey start will ignore the survey status. If you want
 $screeb("survey.start", "<SURVEY_ID>", { ignore_survey_status: false });
 ```
 
+## Target a custom CSS Selector
+
+If you want to target a specific element on your page, you can use the `selectors` argument:
+
+```js
+$screeb("survey.start", "<SURVEY_ID>", {
+  selectors: ".my-element" | ["#my-element", ".my-element"],
+});
+```
+
 ## Contextualize response
 
 The `survey.start` command accepts an object of hidden fields. Values passed as parameters will be listed alongside the responses, on the Screeb platform.
