@@ -12,16 +12,18 @@ Thanks to this you will be able to interact with your website when a survey appe
 
 You can define hooks on `Screeb.initSdk()` and `Screeb.startSurvey()` commands. Hooks are all optional.
 
-Available hooks are:
+## Available hooks
 
-- `onSurveyShowed`: called when a survey is showed
-- `onSurveyStarted`: called when a survey is started
-- `onQuestionReplied`: called when a question is replied
-- `onSurveyCompleted`: called when a survey is completed
-- `onSurveyHidden`: called when a survey is hidden
-- `onReady`: called when the SDK is ready (Only available on `Screeb.initSdk()`)
-- `onSurveyDisplayAllowed`: called before a survey display to allow it or not (Only available on `Screeb.initSdk()`)
-- `onMessageDisplayAllowed`: called before a message display to allow it or not (Only available on `Screeb.initSdk()`)
+| Hook Name                                                 | Available on `Screeb.initSdk()` | Available on `Screeb.startSurvey()` |
+| --------------------------------------------------------- | ------------------- | --------------------------- |
+| [`onSurveyShowed`](#onsurveyshowed)                       | Yes ✅              | Yes ✅                      |
+| [`onSurveyStarted`](#onsurveystarted)                     | Yes ✅              | Yes ✅                      |
+| [`onQuestionReplied`](#onquestionreplied)                 | Yes ✅              | Yes ✅                      |
+| [`onSurveyCompleted`](#onsurveycompleted)                 | Yes ✅              | Yes ✅                      |
+| [`onSurveyHidden`](#onsurveyhidden)                       | Yes ✅              | Yes ✅                      |
+| [`onAppStoreRatingTriggered`](#onappstoreratingtriggered) | Yes ✅              | Yes ✅                      |
+| [`onReady`](#onready)                                     | Yes ✅              | No ❌                       |
+| [`onSurveyDisplayAllowed`](#onsurveydisplayallowed)       | Yes ✅              | No ❌                       |
 
 ### Set hooks on SDK init
 
@@ -57,10 +59,32 @@ Screeb.startSurvey(
 )
 ```
 
-### Payload types
+---
+
+## `onSurveyShowed`
+
+Called when a survey is showed.
+
+<details open>
+<summary>Example</summary>
 
 ```swift
-onSurveyShowed: {
+Screeb.initSdk(this,
+    "<ios-channel-id>",
+    ...
+    hooks: [
+        "version": "1.0.0",
+        "onSurveyShowed": {(e:Any) -> () in print("Screeb survey showed " + String(describing: e))},
+    ]
+)
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
         type: "ios"
@@ -98,8 +122,33 @@ onSurveyShowed: {
         user_id: string,
     }
 }
+```
+</details>
 
-onSurveyStarted: {
+## `onSurveyStarted`
+
+Called when a survey is started.
+
+<details open>
+<summary>Example</summary>
+
+```swift
+Screeb.initSdk(this,
+    "<ios-channel-id>",
+    ...
+    hooks: [
+        "version": "1.0.0",
+        "onSurveyStarted": {(e:Any) -> () in print("Screeb survey started " + String(describing: e))},
+    ]
+)
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
         type: "ios"
@@ -118,8 +167,33 @@ onSurveyStarted: {
         user_id: string,
     }
 }
+```
+</details>
 
-onQuestionReplied: {
+## `onQuestionReplied`
+
+Called when a question is replied.
+
+<details open>
+<summary>Example</summary>
+
+```swift
+Screeb.initSdk(this,
+    "<ios-channel-id>",
+    ...
+    hooks: [
+        "version": "1.0.0",
+        "onQuestionReplied": {(e:Any) -> () in print("Screeb Question Replied " + String(describing: e))},
+    ]
+)
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
         type: "ios"
@@ -174,8 +248,33 @@ onQuestionReplied: {
         user_id: string,
     }
 }
+```
+</details>
 
-onSurveyCompleted: {
+## `onSurveyCompleted`
+
+Called when a survey is completed.
+
+<details open>
+<summary>Example</summary>
+
+```swift
+Screeb.initSdk(this,
+    "<ios-channel-id>",
+    ...
+    hooks: [
+        "version": "1.0.0",
+        "onSurveyCompleted": {(e:Any) -> () in print("Screeb survey completed " + String(describing: e))},
+    ]
+)
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
         type: "ios"
@@ -213,8 +312,33 @@ onSurveyCompleted: {
         user_id: string,
     }
 }
+```
+</details>
 
-onSurveyHidden: {
+## `onSurveyHidden`
+
+Called when a survey is hidden.
+
+<details open>
+<summary>Example</summary>
+
+```swift
+Screeb.initSdk(this,
+    "<ios-channel-id>",
+    ...
+    hooks: [
+        "version": "1.0.0",
+        "onSurveyHidden": {(e:Any) -> () in print("Screeb survey hidden " + String(describing: e))},
+    ]
+)
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
         type: "ios"
@@ -253,8 +377,33 @@ onSurveyHidden: {
         user_id: string,
     }
 }
+```
+</details>
 
-onReady: {
+## `onAppStoreRatingTriggered`
+
+Called when an App Store Rating question is triggered.
+
+<details open>
+<summary>Example</summary>
+
+```swift
+Screeb.initSdk(this,
+    "<ios-channel-id>",
+    ...
+    hooks: [
+        "version": "1.0.0",
+        "onAppStoreRatingTriggered": {(e:Any) -> () in print("Screeb app store rating triggered " + String(describing: e))},
+    ]
+)
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
         type: "ios"
@@ -264,11 +413,73 @@ onReady: {
         user_id: string,
     }
 }
+```
+</details>
 
-onSurveyDisplayAllowed: {
+## `onReady`
+
+Called when the SDK is ready. Only available on `Screeb.initSdk()`.
+
+<details open>
+<summary>Example</summary>
+
+```swift
+Screeb.initSdk(this,
+    "<ios-channel-id>",
+    ...
+    hooks: [
+        "version": "1.0.0",
+        "onReady": {(e:Any) -> () in print("Screeb SDK ready " + String(describing: e))},
+    ]
+)
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
-        type: "widget"
+        type: "ios"
+    },
+    user: {
+        anonymous_id: string,
+        user_id: string,
+    }
+}
+```
+</details>
+
+## `onSurveyDisplayAllowed`
+
+Called before a survey display to allow it or not. Only available on `Screeb.initSdk()`.
+Return a boolean value. Return `false` to prevent display.
+
+<details open>
+<summary>Example</summary>
+
+```swift
+Screeb.initSdk(this,
+    "<ios-channel-id>",
+    ...
+    hooks: [
+        "version": "1.0.0",
+        "onSurveyDisplayAllowed": {(e:Any) -> Bool in print("Screeb survey display available " + String(describing: e)); return true},
+    ]
+)
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
+    channel: {
+        id: string,
+        type: "ios"
     },
     survey: {
         id: string,
@@ -278,18 +489,5 @@ onSurveyDisplayAllowed: {
         user_id: string,
     }
 }
-
-onMessageDisplayAllowed: {
-    channel: {
-        id: string,
-        type: "widget"
-    },
-    message: {
-        id: string,
-    },
-    user: {
-        anonymous_id: string,
-        user_id: string,
-    }
-}
 ```
+</details>

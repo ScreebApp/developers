@@ -12,16 +12,18 @@ Thanks to this you will be able to interact with your application when a survey 
 
 You can define hooks on `initSdk()` and `startSurvey()` commands. Hooks are all optional.
 
-Available hooks are:
+## Available hooks
 
-- `onSurveyShowed`: called when a survey is showed
-- `onSurveyStarted`: called when a survey is started
-- `onQuestionReplied`: called when a question is replied
-- `onSurveyCompleted`: called when a survey is completed
-- `onSurveyHidden`: called when a survey is hidden
-- `onReady`: called when the SDK is ready (Only available on `initSdk()`)
-- `onSurveyDisplayAllowed`: called before a survey display to allow it or not (Only available on `initSdk()`)
-- `onMessageDisplayAllowed`: called before a message display to allow it or not (Only available on `initSdk()`)
+| Hook Name                                                 | Available on `initSdk()` | Available on `startSurvey()` |
+| --------------------------------------------------------- | ------------------- | --------------------------- |
+| [`onSurveyShowed`](#onsurveyshowed)                       | Yes ✅              | Yes ✅                      |
+| [`onSurveyStarted`](#onsurveystarted)                     | Yes ✅              | Yes ✅                      |
+| [`onQuestionReplied`](#onquestionreplied)                 | Yes ✅              | Yes ✅                      |
+| [`onSurveyCompleted`](#onsurveycompleted)                 | Yes ✅              | Yes ✅                      |
+| [`onSurveyHidden`](#onsurveyhidden)                       | Yes ✅              | Yes ✅                      |
+| [`onAppStoreRatingTriggered`](#onappstoreratingtriggered) | Yes ✅              | Yes ✅                      |
+| [`onReady`](#onready)                                     | Yes ✅              | No ❌                       |
+| [`onSurveyDisplayAllowed`](#onsurveydisplayallowed)       | Yes ✅              | No ❌                       |
 
 ### Set hooks on SDK init
 
@@ -67,13 +69,39 @@ startSurvey(
 );
 ```
 
-### Payload types
+---
+
+## `onSurveyShowed`
+
+Called when a survey is showed.
+
+<details open>
+<summary>Example</summary>
 
 ```js
-onSurveyShowed: {
+initSdk(
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {...},
+  {
+    version: "1.0.0",
+    onSurveyShowed: (payload: any) => {
+      console.log("onSurveyShowed", payload);
+    },
+  }
+);
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
-        type: "android" | "ios"
+        type: "ios"
     },
     survey: {
         id: string,
@@ -108,11 +136,40 @@ onSurveyShowed: {
         user_id: string,
     }
 }
+```
+</details>
 
-onSurveyStarted: {
+## `onSurveyStarted`
+
+Called when a survey is started.
+
+<details open>
+<summary>Example</summary>
+
+```js
+initSdk(
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {...},
+  {
+    version: "1.0.0",
+    onSurveyStarted: (payload: any) => {
+      console.log("onSurveyStarted", payload);
+    },
+  }
+);
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
-        type: "android" | "ios"
+        type: "ios"
     },
     survey: {
         id: string,
@@ -128,11 +185,40 @@ onSurveyStarted: {
         user_id: string,
     }
 }
+```
+</details>
 
-onQuestionReplied: {
+## `onQuestionReplied`
+
+Called when a question is replied.
+
+<details open>
+<summary>Example</summary>
+
+```js
+initSdk(
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {...},
+  {
+    version: "1.0.0",
+    onQuestionReplied: (payload: any) => {
+      console.log("onQuestionReplied", payload);
+    },
+  }
+);
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
-        type: "android" | "ios"
+        type: "ios"
     },
     survey: {
         id: string,
@@ -184,11 +270,40 @@ onQuestionReplied: {
         user_id: string,
     }
 }
+```
+</details>
 
-onSurveyCompleted: {
+## `onSurveyCompleted`
+
+Called when a survey is completed.
+
+<details open>
+<summary>Example</summary>
+
+```js
+initSdk(
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {...},
+  {
+    version: "1.0.0",
+    onSurveyCompleted: (payload: any) => {
+      console.log("onSurveyCompleted", payload);
+    },
+  }
+);
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
-        type: "android" | "ios"
+        type: "ios"
     },
     survey: {
         id: string,
@@ -223,11 +338,40 @@ onSurveyCompleted: {
         user_id: string,
     }
 }
+```
+</details>
 
-onSurveyHidden: {
+## `onSurveyHidden`
+
+Called when a survey is hidden.
+
+<details open>
+<summary>Example</summary>
+
+```js
+initSdk(
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {...},
+  {
+    version: "1.0.0",
+    onSurveyHidden: (payload: any) => {
+      console.log("onSurveyHidden", payload);
+    },
+  }
+);
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
-        type: "android" | "ios"
+        type: "ios"
     },
     survey: {
         id: string,
@@ -263,22 +407,123 @@ onSurveyHidden: {
         user_id: string,
     }
 }
+```
+</details>
 
-onReady: {
+## `onAppStoreRatingTriggered`
+
+Called when an App Store Rating question is triggered.
+
+<details open>
+<summary>Example</summary>
+
+```js
+initSdk(
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {...},
+  {
+    version: "1.0.0",
+    onAppStoreRatingTriggered: (payload: any) => {
+      console.log("onAppStoreRatingTriggered", payload);
+    },
+  }
+);
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
-        type: "android" | "ios"
+        type: "ios"
     },
     user: {
         anonymous_id: string,
         user_id: string,
     }
 }
+```
+</details>
 
-onSurveyDisplayAllowed: {
+## `onReady`
+
+Called when the SDK is ready. Only available on `initSdk()`.
+
+<details open>
+<summary>Example</summary>
+
+```js
+initSdk(
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {...},
+  {
+    version: "1.0.0",
+    onSurveyShowed: (payload: any) => {
+      console.log("onReady", payload);
+    },
+  }
+);
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
     channel: {
         id: string,
-        type: "widget"
+        type: "ios"
+    },
+    user: {
+        anonymous_id: string,
+        user_id: string,
+    }
+}
+```
+</details>
+
+## `onSurveyDisplayAllowed`
+
+Called before a survey display to allow it or not. Only available on `initSdk()`.
+Return a boolean value. Return `false` to prevent display.
+
+<details open>
+<summary>Example</summary>
+
+```js
+initSdk(
+  "<android-channel-id>",
+  "<ios-channel-id>",
+  "<user-id>",
+  {...},
+  {
+    version: "1.0.0",
+    onSurveyDisplayAllowed: (payload: any) => {
+      console.log("onSurveyDisplayAllowed", payload);
+      // return false to prevent display
+      return true;
+    },
+  }
+);
+```
+</details>
+
+<details>
+<summary>Payload definition</summary>
+
+```json
+{
+    channel: {
+        id: string,
+        type: "ios"
     },
     survey: {
         id: string,
@@ -288,18 +533,5 @@ onSurveyDisplayAllowed: {
         user_id: string,
     }
 }
-
-onMessageDisplayAllowed: {
-    channel: {
-        id: string,
-        type: "widget"
-    },
-    message: {
-        id: string,
-    },
-    user: {
-        anonymous_id: string,
-        user_id: string,
-    }
-}
 ```
+</details>
