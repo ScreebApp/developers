@@ -21,6 +21,20 @@ $screeb('init', 'c05786bb-1e67-4da8-ad89-f33acc29bc72');
 `,
 };
 
+const commonPages = (id: string, sidebar: string) => ({
+  id: id,
+  path: 'docs/common',
+  routeBasePath: 'common',
+  sidebarPath: sidebar,
+
+  versions: {
+    current: {
+      label: 'Javascript tag',
+      badge: true,
+    },
+  },
+});
+
 const config: Config = {
   title: 'Screeb',
   tagline: 'Developer documentation',
@@ -62,7 +76,7 @@ const config: Config = {
         googleTagManager: gtm,
 
         docs: {
-          path: 'docs/home',
+          path: 'docs/sdk-js',
           routeBasePath: '/',
 
           sidebarPath: false,
@@ -82,6 +96,7 @@ const config: Config = {
         path: 'docs/sdk-js',
         routeBasePath: 'sdk-js',
         sidebarPath: './sidebars/sidebar-sdk-js.ts',
+        include: ['**/*.{md,mdx}'],
 
         versions: {
           current: {
@@ -98,6 +113,7 @@ const config: Config = {
         path: 'docs/sdk-android',
         routeBasePath: 'sdk-android',
         sidebarPath: './sidebars/sidebar-sdk-android.ts',
+        include: ['**/*.{md,mdx}'],
 
         versions: {
           current: {
@@ -114,6 +130,7 @@ const config: Config = {
         path: 'docs/sdk-ios',
         routeBasePath: 'sdk-ios',
         sidebarPath: './sidebars/sidebar-sdk-ios.ts',
+        include: ['**/*.{md,mdx}'],
 
         versions: {
           current: {
@@ -130,6 +147,7 @@ const config: Config = {
         path: 'docs/sdk-react-native',
         routeBasePath: 'sdk-react-native',
         sidebarPath: './sidebars/sidebar-sdk-react-native.ts',
+        include: ['**/*.{md,mdx}'],
 
         versions: {
           current: {
@@ -146,6 +164,7 @@ const config: Config = {
         path: 'docs/sdk-flutter',
         routeBasePath: 'sdk-flutter',
         sidebarPath: './sidebars/sidebar-sdk-flutter.ts',
+        include: ['**/*.{md,mdx}'],
 
         versions: {
           current: {
