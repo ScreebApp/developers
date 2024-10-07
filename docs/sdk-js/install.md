@@ -34,10 +34,74 @@ Example:
 </script>
 ```
 
-### Using Packages
+### Using NPM Packages
 
 If your app is built with a custom framework, you can install the right Screeb package for you and import it in your code.
 [See NPM Packages.](./npm-packages)
+
+### Using Segment
+
+If you are using Segment, you can install Screeb without any additional coding using Segment Destinations. This method allows you to send data from Segment to Screeb without adding the Screeb tag to your website manually.
+
+To install Screeb using Segment Destinations, follow these steps:
+
+1. **Log in to Segment**: Go to your Segment workspace and log in with your credentials.
+
+2. **Add Screeb as a Destination**:
+  - Navigate to the **Destinations** tab in your Segment workspace.
+  - Click on **Add Destination**.
+  - Search for **Screeb Web (Actions)** in the catalog and select it.
+  - Click on **Configure Screeb Web (Actions)**.
+
+3. **Configure Screeb**:
+  - Enter your Screeb **Workspace ID**. You can find this ID in your [Screeb workspace settings](https://admin.screeb.app/org/last/settings/install).
+  - Follow the on-screen instructions to complete the setup.
+
+4. **Send Data to Screeb**:
+  - Once Screeb is added as a destination, Segment will start sending data to Screeb based on the events you have configured.
+  - Ensure that your events are correctly set up in Segment to capture the data you need in Screeb.
+
+5. **Verify Installation**:
+  - Go back to your Screeb workspace.
+  - Check the incoming data to ensure that events from Segment are being received correctly.
+
+For more detailed instructions, refer to the [Segment documentation](https://segment.com/docs/connections/destinations/catalog/actions-screeb-web/).
+
+By following these steps, you can seamlessly integrate Screeb with Segment and start leveraging the powerful features of both platforms.
+
+
+### Using Google Tag Manager (GTM)
+
+If you are using Google Tag Manager (GTM), you can install Screeb without any additional coding using GTM. This method allows you to send data from GTM to Screeb without adding the Screeb tag to your website manually.
+
+To install Screeb using Google Tag Manager (GTM), follow these steps:
+
+1. **Log in to GTM**: Go to your Google Tag Manager account and log in with your credentials.
+
+2. **Create a New Tag**:
+  - Navigate to the **Tags** section in your GTM workspace.
+  - Click on **Add New Tag** to create a new tag.
+  - Name your new tag and click on **Choose a Tag**.
+  - Navigate to the “Community Tags” by clicking on the banner above the tag list
+  - Search for **Screeb** in the community tags and click on **Add to Workspace**.
+
+3. **Configure the Tag**:
+  - Enter your Screeb **Workspace ID**. You can find this ID in your [Screeb workspace settings](https://admin.screeb.app/org/last/settings/install).
+
+4. **Set Up Trigger**:
+  - Click on **Triggering** to set up a trigger for the tag.
+  - Choose an appropriate trigger, such as **All Pages**, to ensure the Screeb tag is loaded on all pages of your website.
+
+5. **Save and Publish**:
+  - Save the tag configuration.
+  - Click on **Submit** to publish the changes to your GTM container.
+
+6. **Verify Installation**:
+  - Go back to your Screeb workspace.
+  - Check the incoming data to ensure that events from GTM are being received correctly.
+
+By following these steps, you can integrate Screeb with Google Tag Manager and start leveraging the powerful features of both platforms.
+
 
 ## About tag lifecycle
 
