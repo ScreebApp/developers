@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscreeb_docs=self.webpackChunkscreeb_docs||[]).push([[4034],{1454:e=>{e.exports=JSON.parse('{"title":"Javascript tag","description":"install and configure the SDK","slug":"/","permalink":"/sdk-js/","navigation":{"next":{"title":"What is Screeb","permalink":"/sdk-js/what-is-screeb"}}}')}}]);

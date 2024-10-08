@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscreeb_docs=self.webpackChunkscreeb_docs||[]).push([[4265],{50:e=>{e.exports=JSON.parse('{"title":"iOS SDK","description":"install and configure the SDK on iOS devices","slug":"/","permalink":"/sdk-ios/","navigation":{"next":{"title":"What is Screeb","permalink":"/sdk-ios/what-is-screeb"}}}')}}]);

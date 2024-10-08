@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscreeb_docs=self.webpackChunkscreeb_docs||[]).push([[3157],{7761:e=>{e.exports=JSON.parse('{"title":"React-Native SDK","description":"install and configure the SDK on React Native apps","slug":"/","permalink":"/sdk-react-native/","navigation":{"next":{"title":"What is Screeb","permalink":"/sdk-react-native/what-is-screeb"}}}')}}]);
