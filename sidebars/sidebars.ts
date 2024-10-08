@@ -37,7 +37,6 @@ const sidebars: SidebarsConfig = {
         // }
       ],
     },
-    'npm-packages',
     {
       type: 'category',
       label: 'Android SDK',

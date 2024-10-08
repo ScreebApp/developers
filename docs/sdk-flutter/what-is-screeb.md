@@ -7,5 +7,4 @@ sidebar_label: What is Screeb
 
 import WhatIsScreeb from '../common/_what-is-screeb.md';
 
-
 <WhatIsScreeb components={props.components} />

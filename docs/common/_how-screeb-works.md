@@ -2,8 +2,6 @@
 
 Screeb gather anonymous user data from your product and analyse them to extract valuable information. Screeb can then display surveys or messages to the right users at the right time using its targeting system. Collected feedback will also be analysed and presented into easily readable dashboards, improving the overall Product manager experience.
 
-// Insert Schema here
-
 Four types of data can be collected using the Screeb Tag:
 
 - **identity**: identify user using a unique identifier_id chosen by you.

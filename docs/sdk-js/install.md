@@ -16,7 +16,12 @@ For that, you need to copy the Screeb tag code and paste it into your website's 
 You can find this code in your workspace settings, (see [Install Screeb section](https://admin.screeb.app/org/last/settings/install)).
 
 
-> :warning: Pay Attention to the identifier `<website-id>` in the tag code. This identifier is unique per Screeb workspace.
+:::tip
+
+Pay Attention to the identifier `<website-id>` in the tag code. This identifier is unique per Screeb workspace.
+
+:::
+
 
 Paste the tag at the end of your HTML page (before `</body>`).
 
