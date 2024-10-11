@@ -5,6 +5,6 @@ sidebar_position: -1
 sidebar_label: How Screeb works
 ---
 
-import HowScreebWorks from '../common/_how-screeb-works.md';
+import HowScreebWorks from '@site/docs/common/_how-screeb-works.md';
 
 <HowScreebWorks components={props.components} />
