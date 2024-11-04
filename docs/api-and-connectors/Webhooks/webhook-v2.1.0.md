@@ -1,8 +1,9 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
+title: v2.1.0
 ---
 
-# Webhook v2.0.0
+# Webhook v2.1.0
 
 On visitor action (such as clicking on a choice, scoring, input...) Screeb can send a request to an external platform, containing the response data.
 
@@ -30,11 +31,30 @@ You can trigger webhooks on 3 different events:
 
 On large synchronization order, the webhook destination may reply to Screeb with a 429 HTTP error (**rate limiting**). Screeb will resend these messages many times, with exponential delay.
 
-## Migrate from v1.3.0
+## Migrate from v2.0.0
 
-- Each `correlation_id` has been renamed `id`, and the previous `id` property is not available anymore.
-- `payload.respondent` has been renamed `payload.user`
-- `payload.response.answer.field` has been converted into a array: `payload.response.answer.fields`
+`response.hidden_fields` has been split into 3 objects:
+- `user.properties`: snapshot of user properties on response start
+- `response.context`: contextual informations (url, browser, locale, timezone, screen size...)
+- `response.hidden_fields`: only for hidden fields created on response start
+
+Properties can be nested. Eg:
+
+```js
+{
+  // ...
+
+  "context": {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "browser": {
+      "name": "chrome",
+      "version": "1.2.3"
+    }
+  },
+
+  // ...
+}
+```
 
 ## Example payload
 
@@ -69,7 +89,15 @@ Webhooks deliver the responses to your surveys in JSON format, via a POST HTTP r
       "user_id": "samuel@screeb.app",
       "name": "Samuel Berthe",
       "email": "samuel@screeb.app",
-      "group_names": ["Screeb", "10-100-companies", "plan-enterprise"]
+      "group_names": ["Screeb", "10-100-companies", "plan-enterprise"],
+      "properties": {
+        "firstname": "Samuel",
+        "lastname": "Berthe",
+        "email": "samuel@screeb.app",
+        "plan": "free",
+        "signup_at": "2020-03-01T02:03:04.56789Z",
+        "last_seen_at": "2021-06-09T02:03:04.56789Z"
+      }
     },
     "response": {
       "id": "5854a797-628c-4906-bb4c-da03e418cf47",
@@ -79,13 +107,30 @@ Webhooks deliver the responses to your surveys in JSON format, via a POST HTTP r
       "time_to_complete_second": 34,
       "completion": "fully_completed",
       "hidden_fields": {
-        "firstname": "Samuel",
-        "lastname": "Berthe",
-        "email": "samuel@screeb.app",
-        "locale": "en-US",
-        "support": "desktop",
-        "timezone": -120,
-        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) ...."
+        "variable-from-crm": "blablabla"
+      },
+      "context": {
+        "active_page": {
+          "domain": "screeb.app",
+          "path": "/solutions/product-analytics",
+          "search": "utm_medium=email",
+          "title": "In-app engaging surveys",
+          "url": "https://screeb.app/solutions/product-analytics?utm_medium=email"
+        },
+        "library": {
+          "name": "sdk-js",
+          "source": "sdk-js",
+          "source_type": "screeb",
+          "version": "0.2.61"
+        },
+        "locale": "en-GB",
+        "screen": {
+          "height": 940,
+          "scale": 1,
+          "width": 2560
+        },
+        "timezone": "Europe/Paris",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
       },
       "question": {
         "id": "a44252c3-ef3d-4156-90d6-a3d6364516c0",
@@ -180,6 +225,7 @@ When the destination server replies with a 4xx or 5xx status code, Screeb platfo
 | name         | string         | Yes      | User name (when available in identity properties)  |
 | email        | string         | Yes      | User email (when available in identity properties) |
 | group_names  | Array\<string> | Yes      | User groups                                        |
+| properties   | object         | Yes      | Key/Value of user properties                       |
 
 ### Response
 
@@ -191,6 +237,7 @@ When the destination server replies with a 4xx or 5xx status code, Screeb platfo
 | time_ms                 | long     | No       | Timestamp of response start in millisecond                                                         |
 | time_to_complete_second | long     | Yes      | Seconds between survey display and response end (when event_type == `response.ended`)              |
 | completion              | string   | Yes      | "not_started", "partially_completed" or "fully_completed"                                          |
+| context                 | object   | Yes      | Key/Value of context data                                                                          |
 | hidden_fields           | object   | Yes      | Key/Value of hidden fields                                                                         |
 | question                | Question | Yes      | See the "Question" section (when event_type == `response.answered`)                                |
 | answer                  | Answer   | Yes      | See the "Answer" section (when event_type == `response.answered`)                                  |

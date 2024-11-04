@@ -90,7 +90,7 @@ function HomepageHeader() {
             <div className={styles.moduleContent}>
               <Link
                 className="button button--secondary button--lg"
-                to="/api-and-connectors/webhook-v2.1.0"
+                to="/api-and-connectors/webhooks"
               >
                 Webhooks
               </Link>
