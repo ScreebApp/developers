@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkscreeb_docs=self.webpackChunkscreeb_docs||[]).push([[4627],{8341:e=>{e.exports=JSON.parse('{"title":"Android SDK","description":"install and configure the SDK on Android devices","slug":"/","permalink":"/sdk-android/","navigation":{"next":{"title":"What is Screeb","permalink":"/sdk-android/what-is-screeb"}}}')}}]);
