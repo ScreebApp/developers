@@ -21,6 +21,14 @@ From the Screeb platform, to customize the conditions the surveys are displayed 
 
 ## Attributes
 
+:::warning
+
+For now, Properties attached to events are not supported in the Screeb platform.
+You can send properties but there are no possible use cases for them.
+We are working on it and will update this documentation when this feature is available.
+
+:::
+
 In order to bring context to your event handling, some properties can be added to the event.
 
 <u>Requirements:</u>

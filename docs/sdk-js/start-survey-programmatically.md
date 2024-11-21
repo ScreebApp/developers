@@ -10,6 +10,15 @@ In most cases, you should let the Screeb _targeting engine start_ the survey. Bu
 
 This method is often used for adding feedback button into a menu.
 
+:::tip
+
+You can find the `SURVEY_ID` in the **Manual** section of the survey editor. 
+You can also fint in the survey editor **URL**, after the `/surveys/` part.
+
+![](/assets/sdk/survey_targeting_manual.png)
+
+:::
+
 ```js
 $screeb("survey.start", "<SURVEY_ID>");
 ```

@@ -8,6 +8,15 @@ sidebar_position: 6
 
 In most cases, you should let the Screeb targeting engine start the survey. But sometimes, you may want to run a survey on user action.
 
+:::tip
+
+You can find the `SURVEY_ID` in the **Manual** section of the survey editor. 
+You can also fint in the survey editor **URL**, after the `/surveys/` part.
+
+![](/assets/sdk/survey_targeting_manual.png)
+
+:::
+
 ```js
 import { startSurvey } from "@screeb/react-native";
 
