@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Copilot event tracking
@@ -77,11 +77,12 @@ $screeb("event.track", "screeb_copilot_conversion", {
 
 <u>Mandatory properties:</u>
 
-name: string
-conversation_id: string
-session_id: string
+- name: string
+- conversation_id: string
+- session_id: string
 
 "screeb_copilot_satisfaction"
+
 Triggered when a user provides feedback on the copilot interaction.
 
 ```js
