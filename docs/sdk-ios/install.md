@@ -28,6 +28,7 @@ The Swift version is **>= v5.5.2** and XCode version **>= 13.2.1**.
 The size of the SDK is approximately **198 KB**.
 
 The SDK also need theses permissions if you want to use the Screeb Audio/Video feature.
+
 ```xml
 <key>NSCameraUsageDescription</key>
 <string>This app needs access to the camera to take photos.</string>
@@ -83,7 +84,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                    channelId: "<ios-channel-id>",
                    identity: "<user-id>", // optional
                    visitorProperty: ["age": AnyEncodable(12), "name": AnyEncodable("JohnDoe")], // optional
-                   initOptions: InitOptions(automaticScreenDetection: true|false) // optional
+                   initOptions: InitOptions(automaticScreenDetection: true|false), // optional
+                   language: "en" // optional
         )
         guard let _ = (scene as? UIWindowScene) else { return }
     }
@@ -104,7 +106,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    channelId: "<ios-channel-id>",
                    identity: "<user-id>", // optional
                    visitorProperty: ["age": AnyEncodable(12), "name": AnyEncodable("JohnDoe")], // optional
-                   initOptions: InitOptions(automaticScreenDetection: true|false) // optional
+                   initOptions: InitOptions(automaticScreenDetection: true|false), // optional
+                   language: "en" // optional
         )
         return true
     }

@@ -49,3 +49,13 @@ PluginScreeb.startSurvey("<survey-id>", true, {
     size: 42
 });
 ```
+
+## Force language
+
+If you want to force the survey language, you can pass the `language` parameter:
+Here is the order of priority for the language:
+survey.start param > init param > user property > browser language.
+
+```dart
+PluginScreeb.startSurvey("<survey-id>", true, null, false, "en");
+```

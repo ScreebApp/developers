@@ -58,3 +58,13 @@ $screeb("survey.start", "<SURVEY_ID>", {
   hidden_fields: { color: "green", article_id: 42 },
 });
 ```
+
+## Force language
+
+If you want to force the survey language, you can pass the `language` parameter:
+Here is the order of priority for the language:
+survey.start param > init param > user property > browser language.
+
+```js
+$screeb("survey.start", "<SURVEY_ID>", { language: "en" });
+```

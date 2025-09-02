@@ -32,6 +32,7 @@ The SDK needs the permissions `INTERNET` to work well.
 ```
 
 The SDK also need theses permissions if you want to use the Screeb Audio/Video feature.
+
 ```xml
 <uses-permission android:name="android.permission.CAMERA"/>
 <uses-permission android:name="android.permission.MICROPHONE" />

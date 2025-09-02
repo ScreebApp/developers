@@ -58,3 +58,16 @@ Screeb.startSurvey(
     }
 )
 ```
+
+## Force language
+
+If you want to force the survey language, you can pass the `language` parameter:
+Here is the order of priority for the language:
+survey.start param > init param > user property > browser language.
+
+```kotlin
+Screeb.startSurvey(
+    surveyId = "<SURVEY_ID>",
+    language = "en"
+)
+```
