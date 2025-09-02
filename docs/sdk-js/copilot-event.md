@@ -85,8 +85,8 @@ Triggered when a user provides feedback on the copilot interaction.
 
 ```js
 $screeb("event.track", "screeb_copilot_satisfaction", {
-  rating_scale: "1-5",
-  rating: 4,
+  rating_scale: "5",
+  rating: "4",
   conversation_id: "conv_123",
   session_id: "sess_456",
   // + any custom properties
@@ -95,7 +95,7 @@ $screeb("event.track", "screeb_copilot_satisfaction", {
 
 <u>Mandatory properties:</u>
 
-- rating_scale: string (e.g. "1-5")
-- rating: number
+- rating_scale: string
+- rating: string
 - conversation_id: string
 - session_id: string
