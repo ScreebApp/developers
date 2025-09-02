@@ -68,7 +68,6 @@ Triggered when a copilot interaction leads to a conversion (e.g. a purchase, sig
 
 ```js
 $screeb("event.track", "screeb_copilot_conversion", {
-  name: "Subscription started",
   conversation_id: "conv_123",
   session_id: "sess_456",
   // + any custom properties your product needs
@@ -77,7 +76,6 @@ $screeb("event.track", "screeb_copilot_conversion", {
 
 <u>Mandatory properties:</u>
 
-- name: string
 - conversation_id: string
 - session_id: string
 
