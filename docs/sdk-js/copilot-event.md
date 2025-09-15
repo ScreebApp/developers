@@ -27,7 +27,7 @@ By adding properties to these events, you can provide additional context.
 Triggered when a user sends a message to the copilot.
 
 ```js
-$screeb("event.track", "screeb_copilot_user_prompt", {
+$screeb("event.copilot", "screeb_copilot_user_prompt", {
   prompt: "How can I export my data?",
   conversation_id: "conv_123",
   session_id: "sess_456",
@@ -46,7 +46,7 @@ $screeb("event.track", "screeb_copilot_user_prompt", {
 Triggered when the copilot replies to the user.
 
 ```js
-$screeb("event.track", "screeb_copilot_response", {
+$screeb("event.copilot", "screeb_copilot_response", {
   response: "You can export your data from the Settings page.",
   conversation_id: "conv_123",
   session_id: "sess_456",
@@ -67,7 +67,7 @@ $screeb("event.track", "screeb_copilot_response", {
 Triggered when a copilot interaction leads to a conversion (e.g. a purchase, signup, or workflow completion).
 
 ```js
-$screeb("event.track", "screeb_copilot_conversion", {
+$screeb("event.copilot", "screeb_copilot_conversion", {
   conversation_id: "conv_123",
   session_id: "sess_456",
   // + any custom properties your product needs
@@ -84,7 +84,7 @@ $screeb("event.track", "screeb_copilot_conversion", {
 Triggered when a user provides feedback on the copilot interaction.
 
 ```js
-$screeb("event.track", "screeb_copilot_satisfaction", {
+$screeb("event.copilot", "screeb_copilot_satisfaction", {
   rating_scale: "5",
   rating: "4",
   conversation_id: "conv_123",
