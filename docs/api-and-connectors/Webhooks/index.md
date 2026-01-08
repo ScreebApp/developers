@@ -33,7 +33,7 @@ To configure the Webhook URL at the workspace level, go to the [Webhooks](https:
 #### Survey Level
 
 To configure the Webhook URL at the survey level, follow these steps:
-1. Go to the [Surveys](https://admin.screeb.app/org/last/surveys) page.
+1. Go to the [Surveys](https://admin.screeb.app/org/last/survey/list) page.
 2. Click on the survey you want to configure.
 3. Go to the "Analyze" tab.
 4. Click on the "Connect" section in the side bar.
