@@ -31,6 +31,7 @@ $screeb("event.copilot", "screeb_copilot_user_prompt", {
   prompt: "How can I export my data?",
   conversation_id: "conv_123",
   session_id: "sess_456",
+  agent_id: "agent_789",
   // + any custom properties your product needs
 });
 ```
@@ -40,6 +41,7 @@ $screeb("event.copilot", "screeb_copilot_user_prompt", {
 - prompt: string
 - conversation_id: string
 - session_id: string
+- agent_id: string
 
 "screeb_copilot_response"
 
@@ -50,6 +52,7 @@ $screeb("event.copilot", "screeb_copilot_response", {
   response: "You can export your data from the Settings page.",
   conversation_id: "conv_123",
   session_id: "sess_456",
+  agent_id: "agent_789",
   // + any custom properties your product needs
 });
 ```
@@ -59,6 +62,7 @@ $screeb("event.copilot", "screeb_copilot_response", {
 - response: string
 - conversation_id: string
 - session_id: string
+- agent_id: string
 
 ### Optional Events
 
@@ -70,6 +74,7 @@ Triggered when a copilot interaction leads to a conversion (e.g. a purchase, sig
 $screeb("event.copilot", "screeb_copilot_conversion", {
   conversation_id: "conv_123",
   session_id: "sess_456",
+  agent_id: "agent_789",
   // + any custom properties your product needs
 });
 ```
@@ -78,6 +83,7 @@ $screeb("event.copilot", "screeb_copilot_conversion", {
 
 - conversation_id: string
 - session_id: string
+- agent_id: string
 
 "screeb_copilot_satisfaction"
 
@@ -89,6 +95,7 @@ $screeb("event.copilot", "screeb_copilot_satisfaction", {
   rating: "4",
   conversation_id: "conv_123",
   session_id: "sess_456",
+  agent_id: "agent_789",
   // + any custom properties
 });
 ```
@@ -99,3 +106,4 @@ $screeb("event.copilot", "screeb_copilot_satisfaction", {
 - rating: string
 - conversation_id: string
 - session_id: string
+- agent_id: string
